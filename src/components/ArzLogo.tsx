@@ -11,10 +11,10 @@ interface ArzLogoProps {
 }
 
 const sizeClasses = {
-  sm: "h-9 md:h-10",
-  md: "h-11 md:h-12",
-  lg: "h-14 md:h-16",
-  xl: "h-20 md:h-24",
+  sm: "h-11 md:h-12",
+  md: "h-16 md:h-20",
+  lg: "h-20 md:h-24",
+  xl: "h-28 md:h-36",
 };
 
 export function ArzLogo({
@@ -42,6 +42,7 @@ export function ArzLogo({
     </div>
   );
 }
+
 
 
 
