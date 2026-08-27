@@ -6,7 +6,8 @@
 
 /*
  * ARZ Construction Ltd — design system.
- * Palette: graphite "ink" structure, warm "sand" paper, amber accent.
+ * Palette derived from logo: navy (#1B2D44), copper (#C48B5C), cream (#D9C5A8).
+ * Light, warm & premium aesthetic — logo sits on ivory/cream backgrounds.
  * Type: Archivo Expanded (display) / Archivo (body).
  */
 
@@ -25,6 +26,8 @@
   --color-sand: var(--sand);
   --color-sand-2: var(--sand-2);
   --color-amber: var(--amber);
+  --color-copper: var(--copper);
+  --color-cream: var(--cream);
   --color-whatsapp: var(--whatsapp);
 
   --color-background: var(--background);
@@ -49,38 +52,42 @@
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.625rem;
 
-  --ink: oklch(0.17 0.008 85);
-  --ink-2: oklch(0.225 0.011 92);
-  --sand: oklch(0.891 0.026 88);
-  --sand-2: oklch(0.955 0.017 89);
-  --amber: oklch(0.741 0.144 71.5);
-  --whatsapp: oklch(0.72 0.164 152);
+  /* ── Brand tokens from logo ── */
+  --ink: #1B2D44;                       /* Logo navy — text, headings, dark sections */
+  --ink-2: #142236;                     /* Deeper navy — footer, form panels */
+  --sand: #EDE6DA;                      /* Warm linen — card backgrounds, dividers */
+  --sand-2: #FAF8F4;                    /* Ivory white — page background, light feel */
+  --amber: #C48B5C;                     /* Logo copper — primary CTA buttons */
+  --copper: #B07A4D;                    /* Deeper copper — hover states */
+  --cream: #D9C5A8;                     /* Logo beige pillar — subtle accents */
+  --whatsapp: #25D366;
 
+  /* ── Semantic mapping ── */
   --background: var(--sand-2);
   --foreground: var(--ink);
-  --card: oklch(1 0 0);
+  --card: #FFFFFF;
   --card-foreground: var(--ink);
-  --popover: oklch(1 0 0);
+  --popover: #FFFFFF;
   --popover-foreground: var(--ink);
   --primary: var(--amber);
-  --primary-foreground: var(--ink);
+  --primary-foreground: #FFFFFF;
   --secondary: var(--sand);
   --secondary-foreground: var(--ink);
   --muted: var(--sand);
-  --muted-foreground: oklch(0.52 0.014 85);
-  --accent: var(--sand);
+  --muted-foreground: #5A6B7F;
+  --accent: var(--cream);
   --accent-foreground: var(--ink);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.17 0.008 85 / 15%);
-  --input: oklch(0.17 0.008 85 / 20%);
+  --destructive: #DC3545;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(27, 45, 68, 0.10);
+  --input: rgba(27, 45, 68, 0.12);
   --ring: var(--amber);
 }
 
 @utility rule-top {
-  border-top: 1px solid oklch(0.17 0.008 85 / 15%);
+  border-top: 1px solid rgba(27, 45, 68, 0.10);
 }
 
 @layer base {
@@ -125,3 +132,4 @@
 @utility reveal {
   animation: reveal-up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
+
