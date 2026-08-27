@@ -3,6 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroExtension from "@/assets/hero-extension.jpg";
 import beforeExtension from "@/assets/before-extension.jpg";
 import afterExtension from "@/assets/after-extension.jpg";
+import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
+import loftConversion from "@/assets/loft-conversion.jpg";
+import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
 import { ArzLogo } from "@/components/ArzLogo";
 
 const TITLE = "ARZ Construction Ltd — Extensions, Loft Conversions & Renovations";
@@ -25,15 +28,62 @@ const PHONE = "02079460000";
 const PHONE_DISPLAY = "020 7946 0000";
 const WHATSAPP = "447700900000";
 
-const services = [
-  { n: "01", title: "House renovations", detail: "Full and partial refurbishments" },
-  { n: "02", title: "Rear, side & wraparound extensions", detail: "Ground & single-storey additions" },
-  { n: "03", title: "Loft conversions", detail: "Velux, dormer & hip-to-gable" },
-  { n: "04", title: "Kitchen renovations", detail: "Design, joinery & stone worktops" },
-  { n: "05", title: "Bathroom renovations", detail: "Wet rooms, tiling & fittings" },
-  { n: "06", title: "Plumbing", detail: "Heating, pipework & radiators" },
-  { n: "07", title: "Electrical", detail: "Rewires, lighting & certification" },
-  { n: "08", title: "Roofing, plastering & decorating", detail: "Finishing trades under one roof" },
+const servicesWithImages = [
+  {
+    n: "01",
+    title: "Rear & Side Extensions",
+    detail: "Open-plan living additions with full-height glazing and structural steelwork.",
+    img: afterExtension,
+    tag: "Extensions",
+  },
+  {
+    n: "02",
+    title: "Bespoke Loft Conversions",
+    detail: "Dormer, Velux & hip-to-gable master bedroom suites overlooking London skylines.",
+    img: loftConversion,
+    tag: "Loft Suite",
+  },
+  {
+    n: "03",
+    title: "Luxury Kitchen Renovations",
+    detail: "Custom joinery, marble island worktops and Crittall glass garden doors.",
+    img: kitchenRenovation,
+    tag: "Kitchens",
+  },
+  {
+    n: "04",
+    title: "Spa Bathrooms & Wetrooms",
+    detail: "Microcement wall finishes, freestanding stone tubs and brushed brass fittings.",
+    img: bathroomRenovation,
+    tag: "Bathrooms",
+  },
+];
+
+const portfolioShowcase = [
+  {
+    title: "Victorian Master Suite Loft",
+    location: "Richmond, London",
+    img: loftConversion,
+    specs: "Dormer Conversion · 12 Weeks Build",
+  },
+  {
+    title: "Open-Plan Crittall Kitchen Extension",
+    location: "Dulwich, London",
+    img: kitchenRenovation,
+    specs: "Rear Extension · 14 Weeks Build",
+  },
+  {
+    title: "Microcement Spa Bathroom Refurb",
+    location: "Greenwich, London",
+    img: bathroomRenovation,
+    specs: "Full Wetroom · 6 Weeks Build",
+  },
+  {
+    title: "Modern Architectural Extension",
+    location: "Bromley, London",
+    img: afterExtension,
+    specs: "Wraparound Extension · 16 Weeks Build",
+  },
 ];
 
 const trust = [
@@ -79,6 +129,9 @@ function Index() {
             </a>
             <a className="transition-colors hover:text-amber" href="#projects">
               Projects
+            </a>
+            <a className="transition-colors hover:text-amber" href="#portfolio">
+              Portfolio
             </a>
             <a className="transition-colors hover:text-amber" href="#reviews">
               Reviews
@@ -156,29 +209,74 @@ function Index() {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES WITH LUXURY IMAGES */}
       <section id="services" className="bg-sand-2 py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">Our Expertise</p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Bespoke Construction &amp; Build Services</h2>
-            <p className="mt-4 text-base text-ink/70">From conception to turnkey completion, managed seamlessly under one roof.</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">Our Core Specialisms</p>
+            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Architectural Design &amp; Build Services</h2>
+            <p className="mt-4 text-base text-ink/70">Visual excellence and structural precision across every phase of your build.</p>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((s) => (
-              <div key={s.n} className="luxury-card rounded-2xl p-6 flex flex-col justify-between">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {servicesWithImages.map((s) => (
+              <div key={s.n} className="luxury-card overflow-hidden rounded-2xl flex flex-col justify-between group">
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="font-serif text-2xl font-bold text-amber">{s.n}</span>
-                    <span className="h-2 w-2 rounded-full bg-amber" />
+                  <div className="relative overflow-hidden aspect-[4/3]">
+                    <img
+                      src={s.img}
+                      alt={s.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <span className="absolute top-3 right-3 rounded-full bg-white/90 backdrop-blur-md px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber shadow-xs">
+                      {s.tag}
+                    </span>
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-ink mb-2">{s.title}</h3>
-                  <p className="text-sm text-ink/70 leading-relaxed font-normal">{s.detail}</p>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="font-serif text-lg font-bold text-amber">{s.n}</span>
+                      <h3 className="font-serif text-xl font-bold text-ink">{s.title}</h3>
+                    </div>
+                    <p className="text-sm text-ink/70 leading-relaxed font-normal mt-2">{s.detail}</p>
+                  </div>
                 </div>
-                <a href="#quote" className="mt-6 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors">
-                  <span>Enquire Service</span>
-                  <span>→</span>
-                </a>
+                <div className="px-6 pb-6 pt-2">
+                  <a href="#quote" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors">
+                    <span>Enquire Service</span>
+                    <span>→</span>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PORTFOLIO SHOWCASE GRID */}
+      <section id="portfolio" className="border-t border-ink/10 bg-white py-20 md:py-28">
+        <div className="mx-auto max-w-6xl px-5">
+          <div className="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-2">London Projects</p>
+              <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Recent Architectural Builds</h2>
+            </div>
+            <p className="max-w-md text-sm text-ink/70">A selection of recently completed home extensions, lofts, and refurbishments across London.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {portfolioShowcase.map((p, idx) => (
+              <div key={idx} className="luxury-card overflow-hidden rounded-2xl group">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent opacity-90 transition-opacity group-hover:opacity-75" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <span className="text-xs font-bold uppercase tracking-widest text-amber">{p.location}</span>
+                    <h3 className="font-serif text-2xl font-bold text-white mt-1">{p.title}</h3>
+                    <p className="text-xs text-sand/80 mt-1 font-medium">{p.specs}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
