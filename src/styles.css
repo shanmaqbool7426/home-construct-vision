@@ -5,10 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * ARZ Construction Ltd — design system.
- * Palette derived from logo: navy (#1B2D44), copper (#C48B5C), cream (#D9C5A8).
- * Light, warm & premium aesthetic — logo sits on ivory/cream backgrounds.
- * Type: Archivo Expanded (display) / Archivo (body).
+ * ARZ Construction Ltd — Ultra-Luxury Architectural Design System
+ * Palette derived from logo: Deep Architectural Navy (#111E2E), Copper Gold (#C48B5C), Soft Cream (#FAF7F2).
+ * Typography: Playfair Display (Serif Headings) & Plus Jakarta Sans (Modern Body).
  */
 
 @theme inline {
@@ -18,8 +17,9 @@
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
 
-  --font-display: "Archivo Expanded", "Archivo", sans-serif;
-  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 
   --color-ink: var(--ink);
   --color-ink-2: var(--ink-2);
@@ -52,16 +52,16 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.75rem;
 
   /* ── Brand tokens from logo ── */
-  --ink: #1B2D44;                       /* Logo navy — text, headings, dark sections */
-  --ink-2: #142236;                     /* Deeper navy — footer, form panels */
-  --sand: #EDE6DA;                      /* Warm linen — card backgrounds, dividers */
-  --sand-2: #FAF8F4;                    /* Ivory white — page background, light feel */
-  --amber: #C48B5C;                     /* Logo copper — primary CTA buttons */
-  --copper: #B07A4D;                    /* Deeper copper — hover states */
-  --cream: #D9C5A8;                     /* Logo beige pillar — subtle accents */
+  --ink: #111E2E;                       /* Deep Architectural Navy */
+  --ink-2: #0B1420;                     /* Rich Midnight Surface */
+  --sand: #EFE9DF;                      /* Soft Warm Linen */
+  --sand-2: #FAF8F5;                    /* Pure Warm Ivory */
+  --amber: #C48B5C;                     /* Logo Copper Gold Accent */
+  --copper: #B07A4D;                    /* Deep Copper */
+  --cream: #D9C5A8;                     /* Logo Beige Accent */
   --whatsapp: #25D366;
 
   /* ── Semantic mapping ── */
@@ -76,18 +76,18 @@
   --secondary: var(--sand);
   --secondary-foreground: var(--ink);
   --muted: var(--sand);
-  --muted-foreground: #5A6B7F;
+  --muted-foreground: #556679;
   --accent: var(--cream);
   --accent-foreground: var(--ink);
   --destructive: #DC3545;
   --destructive-foreground: #FFFFFF;
-  --border: rgba(27, 45, 68, 0.10);
-  --input: rgba(27, 45, 68, 0.12);
+  --border: rgba(17, 30, 46, 0.08);
+  --input: rgba(17, 30, 46, 0.12);
   --ring: var(--amber);
 }
 
 @utility rule-top {
-  border-top: 1px solid rgba(27, 45, 68, 0.10);
+  border-top: 1px solid rgba(17, 30, 46, 0.08);
 }
 
 @layer base {
@@ -100,16 +100,14 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    font-feature-settings: "kern" 1;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   h1,
   h2,
-  h3,
-  h4 {
-    font-family: var(--font-display);
-    font-stretch: 115%;
-    letter-spacing: -0.015em;
+  h3 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
     text-wrap: balance;
   }
 
@@ -121,7 +119,7 @@
 @keyframes reveal-up {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -130,6 +128,34 @@
 }
 
 @utility reveal {
-  animation: reveal-up 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+/* Luxury visual effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(196, 139, 92, 0.2);
+  box-shadow: 0 20px 40px -15px rgba(17, 30, 46, 0.06);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #111E2E 0%, #C48B5C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(17, 30, 46, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(17, 30, 46, 0.04);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(196, 139, 92, 0.15);
+  border-color: rgba(196, 139, 92, 0.35);
+}
+
 
