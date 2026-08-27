@@ -107,74 +107,36 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-sand-2 py-12 md:py-20">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-7">
-              <div className="reveal inline-flex items-center gap-2 rounded-full border border-amber/30 bg-amber/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber mb-6">
-                <span>✨</span>
-                <span>London's Premier Architectural Builders</span>
-              </div>
-              <h1 className="reveal font-serif text-4xl font-bold leading-[1.08] text-ink sm:text-5xl md:text-6xl lg:text-6xl">
-                Architectural Grandeur, Built Without Compromise.
-              </h1>
-              <p className="reveal mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-ink/75 font-normal">
-                From bespoke rear extensions to luxury loft conversions and total refurbishments. We design, plan, and construct fixed-price architectural spaces across London.
-              </p>
-
-              <div className="reveal mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  className="rounded-full bg-amber px-7 py-4 text-sm font-bold tracking-wide uppercase text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-                  href="#quote"
-                >
-                  Request Free Quote
-                </a>
-                <a
-                  className="rounded-full border border-ink/20 bg-white/80 backdrop-blur-md px-6 py-4 text-sm font-bold tracking-wide uppercase text-ink transition-all hover:border-ink hover:bg-white"
-                  href="#projects"
-                >
-                  Explore Projects ↓
-                </a>
-              </div>
-
-              {/* Trust Badge Indicators */}
-              <div className="reveal mt-12 grid grid-cols-3 gap-4 border-t border-ink/10 pt-8">
-                <div>
-                  <p className="font-serif text-2xl md:text-3xl font-bold text-ink">15+ Yrs</p>
-                  <p className="text-xs uppercase tracking-wider text-ink/60 font-semibold mt-1">London Craftsmanship</p>
-                </div>
-                <div>
-                  <p className="font-serif text-2xl md:text-3xl font-bold text-amber">100%</p>
-                  <p className="text-xs uppercase tracking-wider text-ink/60 font-semibold mt-1">Fixed-Price Quotes</p>
-                </div>
-                <div>
-                  <p className="font-serif text-2xl md:text-3xl font-bold text-ink">10-Yr</p>
-                  <p className="text-xs uppercase tracking-wider text-ink/60 font-semibold mt-1">Structural Guarantee</p>
-                </div>
-              </div>
+      <section className="relative overflow-hidden bg-sand-2">
+        <div className="relative h-[82vh] min-h-[560px] w-full">
+          <img
+            src={heroExtension}
+            alt="Modern rear house extension at dusk with black-framed glazing and warm interior lighting"
+            width={1920}
+            height={1088}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          {/* Subtle rich gradient overlay blending smoothly into warm ivory page theme */}
+          <div className="absolute inset-0 bg-gradient-to-t from-sand-2 via-sand-2/70 to-sand-2/20" />
+          <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-end px-5 pb-16">
+            <div className="reveal inline-flex items-center gap-2 self-start rounded-full border border-amber/30 bg-white/80 backdrop-blur-md px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber mb-4 shadow-sm">
+              <span>✨</span>
+              <span>Design &amp; Build · Est. 2011</span>
             </div>
-
-            {/* Hero Image Showcase */}
-            <div className="relative lg:col-span-5">
-              <div className="relative overflow-hidden rounded-2xl border border-ink/10 shadow-2xl">
-                <img
-                  src={heroExtension}
-                  alt="Modern rear house extension at dusk with black-framed glazing and warm interior lighting"
-                  width={1920}
-                  height={1088}
-                  className="aspect-[4/5] w-full object-cover transition-transform duration-1000 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 glass-panel rounded-xl p-4 text-ink">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-widest text-amber">Featured Project</p>
-                      <p className="font-serif text-lg font-bold text-ink">Bromley Rear Extension</p>
-                    </div>
-                    <span className="rounded-full bg-amber/15 px-3 py-1 text-xs font-bold text-amber">Completed</span>
-                  </div>
-                </div>
-              </div>
+            <h1 className="reveal max-w-[22ch] font-serif text-5xl font-bold leading-[0.96] text-ink sm:text-6xl lg:text-7xl">
+              Space built to be lived in, not just finished.
+            </h1>
+            <div className="reveal mt-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+              <p className="max-w-[48ch] text-base sm:text-lg font-normal leading-relaxed text-ink/80">
+                Extensions, lofts and full renovations across London and the home counties — measured,
+                quoted and built by one accountable team.
+              </p>
+              <a
+                className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-amber px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
+                href="#quote"
+              >
+                Request a free quote →
+              </a>
             </div>
           </div>
         </div>
