@@ -8,9 +8,9 @@ import loftConversion from "@/assets/loft-conversion.jpg";
 import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
 import { ArzLogo } from "@/components/ArzLogo";
 
-const TITLE = "ARZ Construction Ltd — Extensions, Loft Conversions & Renovations";
+const TITLE = "ARZ Construction Ltd — Extensions, Loft Conversions & Renovations in London";
 const DESCRIPTION =
-  "London design-and-build specialists. Extensions, loft conversions, kitchens, bathrooms, plumbing and electrics — fixed-price quotes, fully insured, 10-year guarantee.";
+  "London construction specialists. Extensions, loft conversions, kitchens, bathrooms, plumbing and electrics — fixed-price quotes, fully insured, 10-year guarantee.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -87,10 +87,10 @@ const portfolioShowcase = [
 ];
 
 const trust = [
-  { title: "Fully insured", detail: "Public liability & builder's risk" },
-  { title: "VAT registered", detail: "GB 123 4567 89" },
-  { title: "10-year guarantee", detail: "On all structural work" },
-  { title: "Fixed-price quotes", detail: "No surprises, line by line" },
+  { title: "Fully insured", detail: "Public liability coverage" },
+  { title: "VAT registered", detail: "Verified business" },
+  { title: "10-year guarantee", detail: "On structural work" },
+  { title: "Fixed-price quotes", detail: "No hidden costs" },
 ];
 
 const areas = ["Bromley", "Croydon", "Dulwich", "Richmond", "Greenwich", "Kingston", "Guildford", "Reigate"];
@@ -213,9 +213,9 @@ function Index() {
       <section id="services" className="bg-sand-2 py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">Our Core Specialisms</p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Architectural Design &amp; Build Services</h2>
-            <p className="mt-4 text-base text-ink/70">Visual excellence and structural precision across every phase of your build.</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">What We Do</p>
+            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Complete Construction & Renovation Services</h2>
+            <p className="mt-4 text-base text-ink/70">Professional construction services across every phase of your project.</p>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {servicesWithImages.map((s) => (
@@ -256,8 +256,8 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-2">London Projects</p>
-              <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Recent Architectural Builds</h2>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-2">Our Recent Projects</p>
+              <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Recently Completed Builds</h2>
             </div>
             <p className="max-w-md text-sm text-ink/70">A selection of recently completed home extensions, lofts, and refurbishments across London.</p>
           </div>
@@ -288,8 +288,8 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="mb-12 text-center max-w-2xl mx-auto">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">Transformation Gallery</p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Before &amp; After Masterpieces</h2>
-            <p className="mt-4 text-base text-ink/70">Observe how we transform dated properties into modern luxury residences.</p>
+            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Before &amp; After Projects</h2>
+            <p className="mt-4 text-base text-ink/70">See how we transform dated properties into modern homes.</p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <figure className="luxury-card overflow-hidden rounded-2xl p-4">
@@ -320,7 +320,7 @@ function Index() {
                 />
               </div>
               <figcaption className="mt-4 flex items-center justify-between px-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-amber">Architectural Handover</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-amber">Completed Project</span>
                 <span className="rounded-full bg-amber/15 px-3 py-1 text-xs font-bold text-amber">After</span>
               </figcaption>
             </figure>
@@ -332,8 +332,8 @@ function Index() {
       <section id="reviews" className="bg-sand-2 py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-5">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">Client Trust</p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Words of Praise from Homeowners</h2>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">Client Testimonials</p>
+            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">What Our Clients Say</h2>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             <figure className="luxury-card rounded-2xl p-8 flex flex-col justify-between">
@@ -380,9 +380,9 @@ function Index() {
       <section className="bg-sand-2 pb-20 md:pb-28">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-5 md:grid-cols-2">
           <div id="areas" className="luxury-card rounded-2xl p-8">
-            <h3 className="font-serif text-2xl font-bold text-ink">Coverage Across Greater London</h3>
+            <h3 className="font-serif text-2xl font-bold text-ink">Areas We Cover Across London</h3>
             <p className="mt-3 text-sm leading-relaxed text-ink/70">
-              Operating throughout London and premium Home Counties with headquarters in Bromley.
+              Operating throughout London and surrounding areas with headquarters in Fitzrovia.
             </p>
             <ul className="mt-6 flex flex-wrap gap-2.5">
               {areas.map((a) => (
@@ -411,10 +411,10 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-5">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-2">Begin Your Journey</p>
-              <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Request Your Consultation</h2>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-2">Get In Touch</p>
+              <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Request Your Free Quote</h2>
               <p className="mt-4 text-base leading-relaxed text-ink/75">
-                Share your architectural vision with us. We respond within 24 hours to schedule a complimentary site valuation.
+                Tell us about your project. We'll respond within 24 hours to arrange a free site visit and provide a fixed-price quote.
               </p>
               <div className="mt-8 flex flex-col gap-4 text-sm font-semibold text-ink">
                 <a className="inline-flex items-center gap-3 hover:text-amber transition-colors" href={`tel:+44${PHONE.slice(1)}`}>
@@ -435,13 +435,14 @@ function Index() {
                       htmlFor="name"
                       className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
                     >
-                      Full Name
+                      Full Name *
                     </label>
                     <input
                       id="name"
                       name="name"
                       type="text"
-                      placeholder="e.g. Alexander Wright"
+                      required
+                      placeholder="Your full name"
                       className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
                     />
                   </div>
@@ -450,12 +451,13 @@ function Index() {
                       htmlFor="phone"
                       className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
                     >
-                      Telephone
+                      Phone Number *
                     </label>
                     <input
                       id="phone"
                       name="phone"
                       type="tel"
+                      required
                       placeholder="e.g. 07700 900000"
                       className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
                     />
@@ -463,43 +465,160 @@ function Index() {
                 </div>
                 <div className="mt-6">
                   <label
-                    htmlFor="project"
+                    htmlFor="email"
                     className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
                   >
-                    Scope of Project
+                    Email Address *
                   </label>
-                  <select
-                    id="project"
-                    name="project"
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="your@email.com"
                     className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                  >
-                    <option>Rear / Side Architectural Extension</option>
-                    <option>Bespoke Loft Conversion</option>
-                    <option>Luxury Kitchen / Bathroom Refurbishment</option>
-                    <option>Full Structural Home Renovation</option>
-                    <option>Complete Mechanical &amp; Electrical Rewire</option>
-                  </select>
+                  />
+                </div>
+                <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="project"
+                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
+                    >
+                      Project Type *
+                    </label>
+                    <select
+                      id="project"
+                      name="project"
+                      required
+                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
+                    >
+                      <option value="">Select project type</option>
+                      <option>House Renovation</option>
+                      <option>Rear Extension</option>
+                      <option>Side Extension</option>
+                      <option>Wraparound Extension</option>
+                      <option>Loft Conversion</option>
+                      <option>Kitchen Renovation</option>
+                      <option>Bathroom Renovation</option>
+                      <option>Plumbing Work</option>
+                      <option>Electrical Work</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="postcode"
+                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
+                    >
+                      Property Postcode *
+                    </label>
+                    <input
+                      id="postcode"
+                      name="postcode"
+                      type="text"
+                      required
+                      placeholder="e.g. SE1 2AB"
+                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
+                    />
+                  </div>
+                </div>
+                <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div>
+                    <label
+                      htmlFor="budget"
+                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
+                    >
+                      Estimated Budget
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
+                    >
+                      <option value="">Select budget range</option>
+                      <option>Under £20,000</option>
+                      <option>£20,000 - £50,000</option>
+                      <option>£50,000 - £100,000</option>
+                      <option>£100,000 - £200,000</option>
+                      <option>Over £200,000</option>
+                      <option>Prefer not to say</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="start"
+                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
+                    >
+                      Preferred Start Date
+                    </label>
+                    <input
+                      id="start"
+                      name="start"
+                      type="text"
+                      placeholder="e.g. ASAP, 3 months"
+                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
+                    />
+                  </div>
                 </div>
                 <div className="mt-6">
                   <label
                     htmlFor="details"
                     className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
                   >
-                    Project Overview
+                    Project Description *
                   </label>
                   <textarea
                     id="details"
                     name="details"
-                    rows={3}
-                    placeholder="Briefly describe your space and intended timeline..."
+                    rows={4}
+                    required
+                    placeholder="Please describe your project, including any specific requirements or ideas..."
                     className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
                   />
+                </div>
+                <div className="mt-6">
+                  <label
+                    htmlFor="contact"
+                    className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
+                  >
+                    Preferred Contact Method
+                  </label>
+                  <div className="flex flex-wrap gap-4">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="contact"
+                        value="phone"
+                        className="accent-amber"
+                      />
+                      <span className="text-sm text-ink/80">Phone</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="contact"
+                        value="whatsapp"
+                        className="accent-amber"
+                      />
+                      <span className="text-sm text-ink/80">WhatsApp</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="contact"
+                        value="email"
+                        className="accent-amber"
+                      />
+                      <span className="text-sm text-ink/80">Email</span>
+                    </label>
+                  </div>
                 </div>
                 <button
                   type="submit"
                   className="mt-8 w-full rounded-xl bg-amber px-6 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
                 >
-                  Submit Quote Request
+                  Request My Free Quote
                 </button>
               </form>
             </div>
@@ -513,9 +632,21 @@ function Index() {
           <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
             <div>
               <ArzLogo size="lg" theme="light" />
-              <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink/65">
-                Registered in England &amp; Wales · Company No. 07452319 · VAT No. GB 123 4567 89
-              </p>
+              <div className="mt-4 max-w-sm space-y-2 text-sm leading-relaxed text-ink/65">
+                <p className="font-semibold text-ink/80">Head Office</p>
+                <p>
+                  4th Floor, Silverstream House
+                  <br />
+                  45 Fitzroy Street, Fitzrovia
+                  <br />
+                  London, W1T 6EB
+                </p>
+                <p className="mt-3">
+                  Registered in England & Wales
+                  <br />
+                  Company details available on request
+                </p>
+              </div>
             </div>
             <div className="flex flex-col gap-2.5 text-sm font-medium text-ink/75">
               <a className="hover:text-amber transition-colors" href="#">

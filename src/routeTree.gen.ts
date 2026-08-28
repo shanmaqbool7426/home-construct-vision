@@ -10,33 +10,258 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AreasRouteImport } from './routes/areas'
+import { Route as BathroomRenovationsRouteImport } from './routes/bathroom-renovations'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ElectricalRouteImport } from './routes/electrical'
+import { Route as ExtensionsRouteImport } from './routes/extensions'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HouseRenovationsRouteImport } from './routes/house-renovations'
+import { Route as KitchenRenovationsRouteImport } from './routes/kitchen-renovations'
+import { Route as LoftConversionsRouteImport } from './routes/loft-conversions'
+import { Route as OtherServicesRouteImport } from './routes/other-services'
+import { Route as PlumbingRouteImport } from './routes/plumbing'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as TermsRouteImport } from './routes/terms'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasRoute = AreasRouteImport.update({
+  id: '/areas',
+  path: '/areas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BathroomRenovationsRoute = BathroomRenovationsRouteImport.update({
+  id: '/bathroom-renovations',
+  path: '/bathroom-renovations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ElectricalRoute = ElectricalRouteImport.update({
+  id: '/electrical',
+  path: '/electrical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExtensionsRoute = ExtensionsRouteImport.update({
+  id: '/extensions',
+  path: '/extensions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HouseRenovationsRoute = HouseRenovationsRouteImport.update({
+  id: '/house-renovations',
+  path: '/house-renovations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KitchenRenovationsRoute = KitchenRenovationsRouteImport.update({
+  id: '/kitchen-renovations',
+  path: '/kitchen-renovations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoftConversionsRoute = LoftConversionsRouteImport.update({
+  id: '/loft-conversions',
+  path: '/loft-conversions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OtherServicesRoute = OtherServicesRouteImport.update({
+  id: '/other-services',
+  path: '/other-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlumbingRoute = PlumbingRouteImport.update({
+  id: '/plumbing',
+  path: '/plumbing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/areas': typeof AreasRoute
+  '/bathroom-renovations': typeof BathroomRenovationsRoute
+  '/contact': typeof ContactRoute
+  '/electrical': typeof ElectricalRoute
+  '/extensions': typeof ExtensionsRoute
+  '/faq': typeof FaqRoute
+  '/house-renovations': typeof HouseRenovationsRoute
+  '/kitchen-renovations': typeof KitchenRenovationsRoute
+  '/loft-conversions': typeof LoftConversionsRoute
+  '/other-services': typeof OtherServicesRoute
+  '/plumbing': typeof PlumbingRoute
+  '/privacy': typeof PrivacyRoute
+  '/projects': typeof ProjectsRoute
+  '/reviews': typeof ReviewsRoute
+  '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/areas': typeof AreasRoute
+  '/bathroom-renovations': typeof BathroomRenovationsRoute
+  '/contact': typeof ContactRoute
+  '/electrical': typeof ElectricalRoute
+  '/extensions': typeof ExtensionsRoute
+  '/faq': typeof FaqRoute
+  '/house-renovations': typeof HouseRenovationsRoute
+  '/kitchen-renovations': typeof KitchenRenovationsRoute
+  '/loft-conversions': typeof LoftConversionsRoute
+  '/other-services': typeof OtherServicesRoute
+  '/plumbing': typeof PlumbingRoute
+  '/privacy': typeof PrivacyRoute
+  '/projects': typeof ProjectsRoute
+  '/reviews': typeof ReviewsRoute
+  '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/areas': typeof AreasRoute
+  '/bathroom-renovations': typeof BathroomRenovationsRoute
+  '/contact': typeof ContactRoute
+  '/electrical': typeof ElectricalRoute
+  '/extensions': typeof ExtensionsRoute
+  '/faq': typeof FaqRoute
+  '/house-renovations': typeof HouseRenovationsRoute
+  '/kitchen-renovations': typeof KitchenRenovationsRoute
+  '/loft-conversions': typeof LoftConversionsRoute
+  '/other-services': typeof OtherServicesRoute
+  '/plumbing': typeof PlumbingRoute
+  '/privacy': typeof PrivacyRoute
+  '/projects': typeof ProjectsRoute
+  '/reviews': typeof ReviewsRoute
+  '/services': typeof ServicesRoute
+  '/terms': typeof TermsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/areas'
+    | '/bathroom-renovations'
+    | '/contact'
+    | '/electrical'
+    | '/extensions'
+    | '/faq'
+    | '/house-renovations'
+    | '/kitchen-renovations'
+    | '/loft-conversions'
+    | '/other-services'
+    | '/plumbing'
+    | '/privacy'
+    | '/projects'
+    | '/reviews'
+    | '/services'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/areas'
+    | '/bathroom-renovations'
+    | '/contact'
+    | '/electrical'
+    | '/extensions'
+    | '/faq'
+    | '/house-renovations'
+    | '/kitchen-renovations'
+    | '/loft-conversions'
+    | '/other-services'
+    | '/plumbing'
+    | '/privacy'
+    | '/projects'
+    | '/reviews'
+    | '/services'
+    | '/terms'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/areas'
+    | '/bathroom-renovations'
+    | '/contact'
+    | '/electrical'
+    | '/extensions'
+    | '/faq'
+    | '/house-renovations'
+    | '/kitchen-renovations'
+    | '/loft-conversions'
+    | '/other-services'
+    | '/plumbing'
+    | '/privacy'
+    | '/projects'
+    | '/reviews'
+    | '/services'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AreasRoute: typeof AreasRoute
+  BathroomRenovationsRoute: typeof BathroomRenovationsRoute
+  ContactRoute: typeof ContactRoute
+  ElectricalRoute: typeof ElectricalRoute
+  ExtensionsRoute: typeof ExtensionsRoute
+  FaqRoute: typeof FaqRoute
+  HouseRenovationsRoute: typeof HouseRenovationsRoute
+  KitchenRenovationsRoute: typeof KitchenRenovationsRoute
+  LoftConversionsRoute: typeof LoftConversionsRoute
+  OtherServicesRoute: typeof OtherServicesRoute
+  PlumbingRoute: typeof PlumbingRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ProjectsRoute: typeof ProjectsRoute
+  ReviewsRoute: typeof ReviewsRoute
+  ServicesRoute: typeof ServicesRoute
+  TermsRoute: typeof TermsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +273,147 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas': {
+      id: '/areas'
+      path: '/areas'
+      fullPath: '/areas'
+      preLoaderRoute: typeof AreasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bathroom-renovations': {
+      id: '/bathroom-renovations'
+      path: '/bathroom-renovations'
+      fullPath: '/bathroom-renovations'
+      preLoaderRoute: typeof BathroomRenovationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/electrical': {
+      id: '/electrical'
+      path: '/electrical'
+      fullPath: '/electrical'
+      preLoaderRoute: typeof ElectricalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/extensions': {
+      id: '/extensions'
+      path: '/extensions'
+      fullPath: '/extensions'
+      preLoaderRoute: typeof ExtensionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/house-renovations': {
+      id: '/house-renovations'
+      path: '/house-renovations'
+      fullPath: '/house-renovations'
+      preLoaderRoute: typeof HouseRenovationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kitchen-renovations': {
+      id: '/kitchen-renovations'
+      path: '/kitchen-renovations'
+      fullPath: '/kitchen-renovations'
+      preLoaderRoute: typeof KitchenRenovationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/loft-conversions': {
+      id: '/loft-conversions'
+      path: '/loft-conversions'
+      fullPath: '/loft-conversions'
+      preLoaderRoute: typeof LoftConversionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/other-services': {
+      id: '/other-services'
+      path: '/other-services'
+      fullPath: '/other-services'
+      preLoaderRoute: typeof OtherServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plumbing': {
+      id: '/plumbing'
+      path: '/plumbing'
+      fullPath: '/plumbing'
+      preLoaderRoute: typeof PlumbingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AreasRoute: AreasRoute,
+  BathroomRenovationsRoute: BathroomRenovationsRoute,
+  ContactRoute: ContactRoute,
+  ElectricalRoute: ElectricalRoute,
+  ExtensionsRoute: ExtensionsRoute,
+  FaqRoute: FaqRoute,
+  HouseRenovationsRoute: HouseRenovationsRoute,
+  KitchenRenovationsRoute: KitchenRenovationsRoute,
+  LoftConversionsRoute: LoftConversionsRoute,
+  OtherServicesRoute: OtherServicesRoute,
+  PlumbingRoute: PlumbingRoute,
+  PrivacyRoute: PrivacyRoute,
+  ProjectsRoute: ProjectsRoute,
+  ReviewsRoute: ReviewsRoute,
+  ServicesRoute: ServicesRoute,
+  TermsRoute: TermsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
