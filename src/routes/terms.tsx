@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { ArzLogo } from "@/components/ArzLogo";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { MobileCta } from "@/components/MobileCta";
 
 const TITLE = "Terms & Conditions — ARZ Construction Ltd";
 const DESCRIPTION = "Terms and conditions for ARZ Construction Ltd services.";
@@ -15,57 +17,12 @@ export const Route = createFileRoute("/terms")({
   component: Terms,
 });
 
-const PHONE = "02079460000";
 const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
 
 function Terms() {
   return (
     <div className="bg-sand-2 text-ink selection:bg-amber selection:text-white">
-      {/* TOP ANNOUNCEMENT BAR */}
-      <div className="bg-ink text-sand-2 text-xs py-2 px-4 text-center tracking-wider uppercase font-medium flex items-center justify-center gap-2 border-b border-amber/20">
-        <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />
-        <span>Important Information</span>
-      </div>
-
-      {/* HEADER */}
-      <header className="sticky top-0 z-40 border-b border-ink/10 bg-sand-2/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="/">
-            <ArzLogo size="md" theme="light" />
-          </a>
-          <nav className="hidden items-center gap-8 text-sm font-semibold tracking-wide text-ink/80 md:flex">
-            <a className="transition-colors hover:text-amber" href="/">
-              Home
-            </a>
-            <a className="transition-colors hover:text-amber" href="/about">
-              About
-            </a>
-            <a className="transition-colors hover:text-amber" href="/services">
-              Services
-            </a>
-            <a className="transition-colors hover:text-amber" href="/contact">
-              Contact
-            </a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <a
-              className="hidden sm:inline-flex rounded-full border border-ink/15 px-4 py-2 text-xs font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-              href={`tel:+44${PHONE.slice(1)}`}
-            >
-              {PHONE_DISPLAY}
-            </a>
-            <a
-              className="rounded-full bg-amber px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-copper hover:shadow-lg hover:-translate-y-0.5"
-              href={`https://wa.me/${WHATSAPP}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* CONTENT */}
       <section className="bg-white py-20 md:py-28">
@@ -159,37 +116,7 @@ function Terms() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-ink/10 bg-sand-2 py-14">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-            <div>
-              <ArzLogo size="lg" theme="light" />
-              <div className="mt-4 max-w-sm space-y-2 text-sm leading-relaxed text-ink/65">
-                <p className="font-semibold text-ink/80">Head Office</p>
-                <p>
-                  4th Floor, Silverstream House
-                  <br />
-                  45 Fitzroy Street, Fitzrovia
-                  <br />
-                  London, W1T 6EB
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2.5 text-sm font-medium text-ink/75">
-              <a className="hover:text-amber transition-colors" href="/privacy">
-                Privacy & Cookie Policy
-              </a>
-              <a className="hover:text-amber transition-colors" href="/terms">
-                Terms & Conditions
-              </a>
-            </div>
-          </div>
-          <p className="mt-10 border-t border-ink/10 pt-6 text-xs text-ink/50">
-            © 2026 ARZ Construction Ltd. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
