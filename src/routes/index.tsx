@@ -6,7 +6,9 @@ import afterExtension from "@/assets/after-extension.jpg";
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
 import loftConversion from "@/assets/loft-conversion.jpg";
 import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
-import { ArzLogo } from "@/components/ArzLogo";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { MobileCta } from "@/components/MobileCta";
 
 const TITLE = "ARZ Construction Ltd — Extensions, Loft Conversions & Renovations in London";
 const DESCRIPTION =
@@ -35,6 +37,7 @@ const servicesWithImages = [
     detail: "Open-plan living additions with full-height glazing and structural steelwork.",
     img: afterExtension,
     tag: "Extensions",
+    link: "/services/extensions",
   },
   {
     n: "02",
@@ -42,6 +45,7 @@ const servicesWithImages = [
     detail: "Dormer, Velux & hip-to-gable master bedroom suites overlooking London skylines.",
     img: loftConversion,
     tag: "Loft Suite",
+    link: "/services/loft-conversions",
   },
   {
     n: "03",
@@ -49,6 +53,7 @@ const servicesWithImages = [
     detail: "Custom joinery, marble island worktops and Crittall glass garden doors.",
     img: kitchenRenovation,
     tag: "Kitchens",
+    link: "/services/kitchen-renovations",
   },
   {
     n: "04",
@@ -56,6 +61,7 @@ const servicesWithImages = [
     detail: "Microcement wall finishes, freestanding stone tubs and brushed brass fittings.",
     img: bathroomRenovation,
     tag: "Bathrooms",
+    link: "/services/bathroom-renovations",
   },
 ];
 
@@ -113,51 +119,7 @@ const faqs = [
 function Index() {
   return (
     <div className="bg-sand-2 text-ink selection:bg-amber selection:text-white">
-      {/* TOP ANNOUNCEMENT BAR */}
-      <div className="bg-ink text-sand-2 text-xs py-2 px-4 text-center tracking-wider uppercase font-medium flex items-center justify-center gap-2 border-b border-amber/20">
-        <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />
-        <span>London Design &amp; Build Specialists · Fixed-Price Guaranteed Quotes</span>
-      </div>
-
-      {/* HEADER */}
-      <header className="sticky top-0 z-40 border-b border-ink/10 bg-sand-2/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <ArzLogo size="md" theme="light" />
-          <nav className="hidden items-center gap-8 text-sm font-semibold tracking-wide text-ink/80 md:flex">
-            <a className="transition-colors hover:text-amber" href="#services">
-              Services
-            </a>
-            <a className="transition-colors hover:text-amber" href="#projects">
-              Projects
-            </a>
-            <a className="transition-colors hover:text-amber" href="#portfolio">
-              Portfolio
-            </a>
-            <a className="transition-colors hover:text-amber" href="#reviews">
-              Reviews
-            </a>
-            <a className="transition-colors hover:text-amber" href="#areas">
-              Areas
-            </a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <a
-              className="hidden sm:inline-flex rounded-full border border-ink/15 px-4 py-2 text-xs font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-              href={`tel:+44${PHONE.slice(1)}`}
-            >
-              {PHONE_DISPLAY}
-            </a>
-            <a
-              className="rounded-full bg-amber px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-copper hover:shadow-lg hover:-translate-y-0.5"
-              href={`https://wa.me/${WHATSAPP}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-sand-2">
@@ -216,10 +178,21 @@ function Index() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">What We Do</p>
             <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Complete Construction & Renovation Services</h2>
             <p className="mt-4 text-base text-ink/70">Professional construction services across every phase of your project.</p>
+            <a
+              href="/services"
+              className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
+            >
+              <span>View All Services</span>
+              <span>→</span>
+            </a>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {servicesWithImages.map((s) => (
-              <div key={s.n} className="luxury-card overflow-hidden rounded-2xl flex flex-col justify-between group">
+              <a
+                key={s.n}
+                href={s.link}
+                className="luxury-card overflow-hidden rounded-2xl flex flex-col justify-between group no-underline"
+              >
                 <div>
                   <div className="relative overflow-hidden aspect-[4/3]">
                     <img
@@ -240,12 +213,12 @@ function Index() {
                   </div>
                 </div>
                 <div className="px-6 pb-6 pt-2">
-                  <a href="#quote" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors">
-                    <span>Enquire Service</span>
+                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors">
+                    <span>View Service</span>
                     <span>→</span>
-                  </a>
+                  </span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -259,11 +232,24 @@ function Index() {
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-2">Our Recent Projects</p>
               <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">Recently Completed Builds</h2>
             </div>
-            <p className="max-w-md text-sm text-ink/70">A selection of recently completed home extensions, lofts, and refurbishments across London.</p>
+            <div className="flex flex-col items-start gap-2 md:items-end">
+              <p className="max-w-md text-sm text-ink/70">A selection of recently completed home extensions, lofts, and refurbishments across London.</p>
+              <a
+                href="/projects"
+                className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
+              >
+                <span>View Full Portfolio</span>
+                <span>→</span>
+              </a>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {portfolioShowcase.map((p, idx) => (
-              <div key={idx} className="luxury-card overflow-hidden rounded-2xl group">
+              <a
+                key={idx}
+                href="/projects"
+                className="luxury-card overflow-hidden rounded-2xl group no-underline"
+              >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
                     src={p.img}
@@ -277,7 +263,7 @@ function Index() {
                     <p className="text-xs text-sand/80 mt-1 font-medium">{p.specs}</p>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -391,6 +377,13 @@ function Index() {
                 </li>
               ))}
             </ul>
+            <a
+              href="/areas"
+              className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
+            >
+              <span>View All Areas</span>
+              <span>→</span>
+            </a>
           </div>
           <div className="luxury-card rounded-2xl p-8">
             <h3 className="font-serif text-2xl font-bold text-ink">Frequently Asked Questions</h3>
@@ -402,6 +395,13 @@ function Index() {
                 </div>
               ))}
             </dl>
+            <a
+              href="/faq"
+              className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
+            >
+              <span>View All FAQs</span>
+              <span>→</span>
+            </a>
           </div>
         </div>
       </section>
@@ -626,71 +626,8 @@ function Index() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-ink/10 bg-sand-2 py-14">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-            <div>
-              <ArzLogo size="lg" theme="light" />
-              <div className="mt-4 max-w-sm space-y-2 text-sm leading-relaxed text-ink/65">
-                <p className="font-semibold text-ink/80">Head Office</p>
-                <p>
-                  4th Floor, Silverstream House
-                  <br />
-                  45 Fitzroy Street, Fitzrovia
-                  <br />
-                  London, W1T 6EB
-                </p>
-                <p className="mt-3">
-                  Registered in England & Wales
-                  <br />
-                  Company details available on request
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-2.5 text-sm font-medium text-ink/75">
-              <a className="hover:text-amber transition-colors" href="#">
-                Privacy &amp; Cookie Policy
-              </a>
-              <a className="hover:text-amber transition-colors" href="#">
-                Terms &amp; Conditions
-              </a>
-            </div>
-            <div className="flex gap-5 text-sm font-bold text-ink/75">
-              <a className="hover:text-amber transition-colors" href="#">
-                Instagram
-              </a>
-              <a className="hover:text-amber transition-colors" href="#">
-                Facebook
-              </a>
-              <a className="hover:text-amber transition-colors" href="#">
-                LinkedIn
-              </a>
-            </div>
-          </div>
-          <p className="mt-10 border-t border-ink/10 pt-6 text-xs text-ink/50">
-            © 2026 ARZ Construction Ltd. All rights reserved. Built with architectural precision.
-          </p>
-        </div>
-      </footer>
-
-      {/* STICKY MOBILE CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-ink/10 bg-sand-2/95 p-3 backdrop-blur-md md:hidden">
-        <a
-          className="flex-1 rounded-xl bg-white px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-ink ring-1 ring-ink/15 shadow-xs"
-          href={`tel:+44${PHONE.slice(1)}`}
-        >
-          Call Studio
-        </a>
-        <a
-          className="flex-1 rounded-xl bg-amber px-3 py-3 text-center text-xs font-bold uppercase tracking-wider text-white shadow-sm"
-          href={`https://wa.me/${WHATSAPP}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          WhatsApp Us
-        </a>
-      </div>
+      <SiteFooter />
+      <MobileCta />
     </div>
   );
 }

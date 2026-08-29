@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import { ArzLogo } from "@/components/ArzLogo";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { MobileCta } from "@/components/MobileCta";
 
 const TITLE = "Customer Reviews — ARZ Construction Ltd | What Our Clients Say";
 const DESCRIPTION =
