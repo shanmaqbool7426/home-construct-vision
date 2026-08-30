@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Terms & Conditions — ARZ Construction Ltd";
+const TITLE = "Terms & Conditions â€” ARZ Construction Ltd";
 const DESCRIPTION = "Terms and conditions for ARZ Construction Ltd services.";
 
 export const Route = createFileRoute("/terms")({
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/terms")({
   component: Terms,
 });
 
-const PHONE_DISPLAY = "020 7946 0000";
+const PHONE_DISPLAY = "+44 7860 135189";
 
 function Terms() {
   return (
@@ -108,7 +108,7 @@ function Terms() {
                 ARZ Construction Ltd<br />
                 4th Floor, Silverstream House<br />
                 45 Fitzroy Street, Fitzrovia<br />
-                London, W1T 6EB<br />
+                London<br />
                 Phone: {PHONE_DISPLAY}
               </address>
             </div>

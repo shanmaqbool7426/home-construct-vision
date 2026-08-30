@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import heroExtension from "@/assets/hero-extension.jpg";
 import afterExtension from "@/assets/after-extension.jpg";
@@ -10,7 +10,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Projects & Gallery — ARZ Construction Ltd | Recent London Construction Projects";
+const TITLE = "Projects & Gallery â€” ARZ Construction Ltd | Recent London Construction Projects";
 const DESCRIPTION =
   "View our portfolio of recently completed construction projects across London. Extensions, loft conversions, kitchen and bathroom renovations. Before and after photos.";
 
@@ -26,8 +26,8 @@ export const Route = createFileRoute("/projects")({
   component: Projects,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
 
 const projects = [
   {
@@ -150,8 +150,8 @@ function Projects() {
                     <h3 className="font-serif text-xl font-bold text-ink">{project.title}</h3>
                   </div>
                   <div className="flex items-center gap-3 text-xs text-ink/60 mb-3">
-                    <span>📍 {project.location}</span>
-                    <span>⏱️ {project.duration}</span>
+                    <span>ðŸ“ {project.location}</span>
+                    <span>â±ï¸ {project.duration}</span>
                   </div>
                   <p className="text-sm text-ink/70 leading-relaxed">{project.description}</p>
                 </div>

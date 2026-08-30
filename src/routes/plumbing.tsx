@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
 import heroExtension from "@/assets/hero-extension.jpg";
@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Plumbing Services in London — Gas Safe Registered Plumbers | ARZ Construction";
+const TITLE = "Plumbing Services in London â€” Gas Safe Registered Plumbers | ARZ Construction";
 const DESCRIPTION =
   "Professional plumbing services across London. Gas Safe registered plumbers for boiler installations, bathroom plumbing, emergency repairs, and central heating systems. 24/7 emergency call-outs.";
 
@@ -23,12 +23,12 @@ export const Route = createFileRoute("/plumbing")({
   component: Plumbing,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
 
 const services = [
   {
-    icon: "🔧",
+    icon: "ðŸ”§",
     title: "Emergency Plumbing Repairs",
     description:
       "24/7 emergency call-outs for burst pipes, leaks, blockages, and boiler breakdowns. Fast response across London.",
@@ -40,7 +40,7 @@ const services = [
     ],
   },
   {
-    icon: "🔥",
+    icon: "ðŸ”¥",
     title: "Boiler Installations",
     description:
       "Gas Safe registered engineers for boiler installations, replacements, and repairs. All major brands supplied and fitted.",
@@ -52,7 +52,7 @@ const services = [
     ],
   },
   {
-    icon: "🚿",
+    icon: "ðŸš¿",
     title: "Bathroom Plumbing",
     description:
       "Complete bathroom plumbing services for renovations and new installations. From sanitaryware to pipework and drainage.",
@@ -64,7 +64,7 @@ const services = [
     ],
   },
   {
-    icon: "🏠",
+    icon: "ðŸ ",
     title: "Central Heating Systems",
     description:
       "Installation and maintenance of central heating systems. Radiators, underfloor heating, and controls.",
@@ -76,7 +76,7 @@ const services = [
     ],
   },
   {
-    icon: "🍳",
+    icon: "ðŸ³",
     title: "Kitchen Plumbing",
     description:
       "Kitchen plumbing for sinks, dishwashers, washing machines, and water filtration systems. Professional installation guaranteed.",
@@ -88,7 +88,7 @@ const services = [
     ],
   },
   {
-    icon: "🔍",
+    icon: "ðŸ”",
     title: "Leak Detection & Repair",
     description:
       "Advanced leak detection services to find and fix leaks without unnecessary damage to your property.",
@@ -103,32 +103,32 @@ const services = [
 
 const whyChooseUs = [
   {
-    icon: "✅",
+    icon: "âœ…",
     title: "Gas Safe Registered",
     description: "All our gas engineers are Gas Safe registered for your safety and peace of mind.",
   },
   {
-    icon: "⏰",
+    icon: "â°",
     title: "24/7 Emergency Service",
     description: "Available round the clock for plumbing emergencies. Fast response times across London.",
   },
   {
-    icon: "💰",
+    icon: "ðŸ’°",
     title: "Fixed-Price Quotes",
     description: "No hidden costs or surprise charges. We provide clear, fixed-price quotes before work begins.",
   },
   {
-    icon: "🛡️",
+    icon: "ðŸ›¡ï¸",
     title: "Fully Insured",
     description: "Comprehensive public liability insurance for complete protection.",
   },
   {
-    icon: "🏆",
+    icon: "ðŸ†",
     title: "Experienced Engineers",
     description: "Our plumbers have extensive experience across all types of plumbing work.",
   },
   {
-    icon: "📋",
+    icon: "ðŸ“‹",
     title: "Guaranteed Work",
     description: "All work comes with our guarantee for quality assurance.",
   },
@@ -209,7 +209,7 @@ function Plumbing() {
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                        ✓
+                        âœ“
                       </span>
                       <span className="text-sm font-medium text-ink/80">{feature}</span>
                     </li>
@@ -254,7 +254,7 @@ function Plumbing() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="luxury-card rounded-2xl p-10 text-center md:p-16 border-amber/30">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-amber/10 text-5xl mb-6">
-              🚨
+              ðŸš¨
             </div>
             <h2 className="font-serif text-3xl font-bold text-ink md:text-4xl">
               Plumbing Emergency?

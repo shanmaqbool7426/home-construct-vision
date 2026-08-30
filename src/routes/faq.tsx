@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Frequently Asked Questions — ARZ Construction Ltd | London Construction FAQs";
+const TITLE = "Frequently Asked Questions â€” ARZ Construction Ltd | London Construction FAQs";
 const DESCRIPTION =
   "Find answers to common questions about our construction services. Extensions, loft conversions, renovations, quotes, timelines, and more.";
 
@@ -20,9 +20,9 @@ export const Route = createFileRoute("/faq")({
   component: FAQ,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const faqs = [
   {
@@ -55,7 +55,7 @@ const faqs = [
       },
       {
         q: "Are your quotes really fixed-price?",
-        a: "Yes, our quotes are comprehensive and fixed-price. The price we quote is the price you pay — there are no hidden costs or surprise charges.",
+        a: "Yes, our quotes are comprehensive and fixed-price. The price we quote is the price you pay â€” there are no hidden costs or surprise charges.",
       },
       {
         q: "How long does it take to get a quote?",

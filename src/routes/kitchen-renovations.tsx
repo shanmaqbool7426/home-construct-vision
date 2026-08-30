@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
 import heroExtension from "@/assets/hero-extension.jpg";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Kitchen Renovations in London — Bespoke Kitchen Design & Installation | ARZ Construction";
+const TITLE = "Kitchen Renovations in London â€” Bespoke Kitchen Design & Installation | ARZ Construction";
 const DESCRIPTION =
   "Professional kitchen renovation services across London. Custom cabinetry, stone worktops, island kitchens, and integrated appliances. Fixed-price quotes, 10-year guarantee.";
 
@@ -24,9 +24,9 @@ export const Route = createFileRoute("/kitchen-renovations")({
   component: KitchenRenovations,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const kitchenStyles = [
   {
@@ -81,37 +81,37 @@ const kitchenStyles = [
 
 const services = [
   {
-    icon: "📐",
+    icon: "ðŸ“",
     title: "Kitchen Design",
     description:
       "Our designers create kitchens that work for your space and lifestyle. From initial concept to detailed 3D visuals, we bring your vision to life.",
   },
   {
-    icon: "🔨",
+    icon: "ðŸ”¨",
     title: "Full Installation",
     description:
       "Complete kitchen fitting service including plumbing, electrics, carpentry, tiling, and decorating. One team handles everything.",
   },
   {
-    icon: "🪨",
+    icon: "ðŸª¨",
     title: "Worktop Supply & Fit",
     description:
       "Granite, quartz, marble, or solid wood worktops. We supply and install all materials with precision templating and fitting.",
   },
   {
-    icon: "💡",
+    icon: "ðŸ’¡",
     title: "Lighting Design",
     description:
       "Strategic lighting design including under-cabinet lights, pendant fittings, and integrated LED systems to enhance your kitchen's ambiance.",
   },
   {
-    icon: "🔌",
+    icon: "ðŸ”Œ",
     title: "Appliance Installation",
     description:
       "Professional installation of all kitchen appliances including ovens, hobs, extractors, fridges, freezers, and dishwashers.",
   },
   {
-    icon: "🎨",
+    icon: "ðŸŽ¨",
     title: "Finishing Touches",
     description:
       "From splashback tiling to decorative finishes, we ensure every detail is perfect. Complete decorating and final touches included.",
@@ -226,7 +226,7 @@ function KitchenRenovations() {
                     {style.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                          ✓
+                          âœ“
                         </span>
                         <span className="text-sm font-medium text-ink/80">{feature}</span>
                       </li>
@@ -287,7 +287,7 @@ function KitchenRenovations() {
                 {materials.map((material) => (
                   <div key={material.title} className="flex items-start gap-3">
                     <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                      ✓
+                      âœ“
                     </span>
                     <div>
                       <h4 className="font-serif font-bold text-ink">{material.title}</h4>

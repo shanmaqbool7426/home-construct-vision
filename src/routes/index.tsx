@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import heroExtension from "@/assets/hero-extension.jpg";
 import beforeExtension from "@/assets/before-extension.jpg";
@@ -9,10 +9,11 @@ import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
+import { QuoteForm } from "@/components/QuoteForm";
 
-const TITLE = "ARZ Construction Ltd — Extensions, Loft Conversions & Renovations in London";
+const TITLE = "ARZ Construction Ltd â€” Extensions, Loft Conversions & Renovations in London";
 const DESCRIPTION =
-  "London construction specialists. Extensions, loft conversions, kitchens, bathrooms, plumbing and electrics — fixed-price quotes, fully insured, 10-year guarantee.";
+  "London construction specialists. Extensions, loft conversions, kitchens, bathrooms, plumbing and electrics â€” fixed-price quotes, fully insured, 10-year guarantee.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,9 +27,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const servicesWithImages = [
   {
@@ -70,25 +71,25 @@ const portfolioShowcase = [
     title: "Victorian Master Suite Loft",
     location: "Richmond, London",
     img: loftConversion,
-    specs: "Dormer Conversion · 12 Weeks Build",
+    specs: "Dormer Conversion Â· 12 Weeks Build",
   },
   {
     title: "Open-Plan Crittall Kitchen Extension",
     location: "Dulwich, London",
     img: kitchenRenovation,
-    specs: "Rear Extension · 14 Weeks Build",
+    specs: "Rear Extension Â· 14 Weeks Build",
   },
   {
     title: "Microcement Spa Bathroom Refurb",
     location: "Greenwich, London",
     img: bathroomRenovation,
-    specs: "Full Wetroom · 6 Weeks Build",
+    specs: "Full Wetroom Â· 6 Weeks Build",
   },
   {
     title: "Modern Architectural Extension",
     location: "Bromley, London",
     img: afterExtension,
-    specs: "Wraparound Extension · 16 Weeks Build",
+    specs: "Wraparound Extension Â· 16 Weeks Build",
   },
 ];
 
@@ -104,11 +105,11 @@ const areas = ["Bromley", "Croydon", "Dulwich", "Richmond", "Greenwich", "Kingst
 const faqs = [
   {
     q: "How long does a typical extension take?",
-    a: "Most single-storey projects run 10–14 weeks from first fix to handover.",
+    a: "Most single-storey projects run 10â€“14 weeks from first fix to handover.",
   },
   {
     q: "Do you handle planning and building regs?",
-    a: "Yes — we manage applications, drawings and sign-off end to end.",
+    a: "Yes â€” we manage applications, drawings and sign-off end to end.",
   },
   {
     q: "Is the quotation really free and fixed?",
@@ -135,22 +136,22 @@ function Index() {
           <div className="absolute inset-0 bg-gradient-to-t from-sand-2 via-sand-2/70 to-sand-2/20" />
           <div className="relative mx-auto flex h-full max-w-6xl flex-col justify-end px-5 pb-16">
             <div className="reveal inline-flex items-center gap-2 self-start rounded-full border border-amber/30 bg-white/80 backdrop-blur-md px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-amber mb-4 shadow-sm">
-              <span>✨</span>
-              <span>Design &amp; Build · Est. 2011</span>
+              <span>âœ¨</span>
+              <span>Design &amp; Build Â· Est. 2011</span>
             </div>
             <h1 className="reveal max-w-[22ch] font-serif text-5xl font-bold leading-[0.96] text-ink sm:text-6xl lg:text-7xl">
               Space built to be lived in, not just finished.
             </h1>
             <div className="reveal mt-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
               <p className="max-w-[48ch] text-base sm:text-lg font-normal leading-relaxed text-ink/80">
-                Extensions, lofts and full renovations across London and the home counties — measured,
+                Extensions, lofts and full renovations across London and the home counties â€” measured,
                 quoted and built by one accountable team.
               </p>
               <a
                 className="inline-flex shrink-0 items-center gap-2 self-start rounded-full bg-amber px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
                 href="#quote"
               >
-                Request a free quote →
+                Request a free quote â†’
               </a>
             </div>
           </div>
@@ -183,7 +184,7 @@ function Index() {
               className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
             >
               <span>View All Services</span>
-              <span>→</span>
+              <span>â†’</span>
             </a>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -215,7 +216,7 @@ function Index() {
                 <div className="px-6 pb-6 pt-2">
                   <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors">
                     <span>View Service</span>
-                    <span>→</span>
+                    <span>â†’</span>
                   </span>
                 </div>
               </a>
@@ -239,7 +240,7 @@ function Index() {
                 className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
               >
                 <span>View Full Portfolio</span>
-                <span>→</span>
+                <span>â†’</span>
               </a>
             </div>
           </div>
@@ -324,9 +325,9 @@ function Index() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             <figure className="luxury-card rounded-2xl p-8 flex flex-col justify-between">
               <div>
-                <div className="flex gap-1 text-amber mb-4">★★★★★</div>
+                <div className="flex gap-1 text-amber mb-4">â˜…â˜…â˜…â˜…â˜…</div>
                 <blockquote className="text-base leading-relaxed text-ink/85 font-normal">
-                  “They turned a dark two-bed into a proper family home. On time, on budget, and spotless every evening.”
+                  â€œThey turned a dark two-bed into a proper family home. On time, on budget, and spotless every evening.â€
                 </blockquote>
               </div>
               <figcaption className="mt-6 pt-4 border-t border-ink/10 flex items-center justify-between">
@@ -336,9 +337,9 @@ function Index() {
             </figure>
             <figure className="luxury-card rounded-2xl p-8 flex flex-col justify-between">
               <div>
-                <div className="flex gap-1 text-amber mb-4">★★★★★</div>
+                <div className="flex gap-1 text-amber mb-4">â˜…â˜…â˜…â˜…â˜…</div>
                 <blockquote className="text-base leading-relaxed text-ink/85 font-normal">
-                  “The loft conversion is the best money we've spent. Clean joinery, no mess left behind.”
+                  â€œThe loft conversion is the best money we've spent. Clean joinery, no mess left behind.â€
                 </blockquote>
               </div>
               <figcaption className="mt-6 pt-4 border-t border-ink/10 flex items-center justify-between">
@@ -348,9 +349,9 @@ function Index() {
             </figure>
             <figure className="luxury-card rounded-2xl p-8 flex flex-col justify-between">
               <div>
-                <div className="flex gap-1 text-amber mb-4">★★★★★</div>
+                <div className="flex gap-1 text-amber mb-4">â˜…â˜…â˜…â˜…â˜…</div>
                 <blockquote className="text-base leading-relaxed text-ink/85 font-normal">
-                  “One team handled everything from plumbing to the final coat of paint. Genuinely rare.”
+                  â€œOne team handled everything from plumbing to the final coat of paint. Genuinely rare.â€
                 </blockquote>
               </div>
               <figcaption className="mt-6 pt-4 border-t border-ink/10 flex items-center justify-between">
@@ -373,7 +374,7 @@ function Index() {
             <ul className="mt-6 flex flex-wrap gap-2.5">
               {areas.map((a) => (
                 <li key={a} className="rounded-full bg-sand-2 border border-ink/10 px-4 py-2 text-xs font-bold uppercase tracking-wider text-ink shadow-xs">
-                  📍 {a}
+                  ðŸ“ {a}
                 </li>
               ))}
             </ul>
@@ -382,7 +383,7 @@ function Index() {
               className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
             >
               <span>View All Areas</span>
-              <span>→</span>
+              <span>â†’</span>
             </a>
           </div>
           <div className="luxury-card rounded-2xl p-8">
@@ -400,7 +401,7 @@ function Index() {
               className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
             >
               <span>View All FAQs</span>
-              <span>→</span>
+              <span>â†’</span>
             </a>
           </div>
         </div>
@@ -418,209 +419,17 @@ function Index() {
               </p>
               <div className="mt-8 flex flex-col gap-4 text-sm font-semibold text-ink">
                 <a className="inline-flex items-center gap-3 hover:text-amber transition-colors" href={`tel:+44${PHONE.slice(1)}`}>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-amber/15 text-amber">📞</span>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-amber/15 text-amber">ðŸ“ž</span>
                   <span>{PHONE_DISPLAY}</span>
                 </a>
-                <a className="inline-flex items-center gap-3 hover:text-amber transition-colors" href="mailto:hello@arzconstruction.co.uk">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-amber/15 text-amber">✉️</span>
-                  <span>hello@arzconstruction.co.uk</span>
+                <a className="inline-flex items-center gap-3 hover:text-amber transition-colors" href="mailto:Arzconstruction23@gmail.com">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-amber/15 text-amber">âœ‰ï¸</span>
+                  <span>Arzconstruction23@gmail.com</span>
                 </a>
               </div>
             </div>
             <div className="lg:col-span-7">
-              <form className="luxury-card rounded-2xl p-8 sm:p-10 border-amber/20 shadow-xl">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                    >
-                      Full Name *
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      placeholder="Your full name"
-                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                    >
-                      Phone Number *
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      required
-                      placeholder="e.g. 07700 900000"
-                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                    />
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <label
-                    htmlFor="email"
-                    className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                  >
-                    Email Address *
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="your@email.com"
-                    className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                  />
-                </div>
-                <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                  <div>
-                    <label
-                      htmlFor="project"
-                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                    >
-                      Project Type *
-                    </label>
-                    <select
-                      id="project"
-                      name="project"
-                      required
-                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                    >
-                      <option value="">Select project type</option>
-                      <option>House Renovation</option>
-                      <option>Rear Extension</option>
-                      <option>Side Extension</option>
-                      <option>Wraparound Extension</option>
-                      <option>Loft Conversion</option>
-                      <option>Kitchen Renovation</option>
-                      <option>Bathroom Renovation</option>
-                      <option>Plumbing Work</option>
-                      <option>Electrical Work</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="postcode"
-                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                    >
-                      Property Postcode *
-                    </label>
-                    <input
-                      id="postcode"
-                      name="postcode"
-                      type="text"
-                      required
-                      placeholder="e.g. SE1 2AB"
-                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                    />
-                  </div>
-                </div>
-                <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-                  <div>
-                    <label
-                      htmlFor="budget"
-                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                    >
-                      Estimated Budget
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                    >
-                      <option value="">Select budget range</option>
-                      <option>Under £20,000</option>
-                      <option>£20,000 - £50,000</option>
-                      <option>£50,000 - £100,000</option>
-                      <option>£100,000 - £200,000</option>
-                      <option>Over £200,000</option>
-                      <option>Prefer not to say</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="start"
-                      className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                    >
-                      Preferred Start Date
-                    </label>
-                    <input
-                      id="start"
-                      name="start"
-                      type="text"
-                      placeholder="e.g. ASAP, 3 months"
-                      className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                    />
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <label
-                    htmlFor="details"
-                    className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                  >
-                    Project Description *
-                  </label>
-                  <textarea
-                    id="details"
-                    name="details"
-                    rows={4}
-                    required
-                    placeholder="Please describe your project, including any specific requirements or ideas..."
-                    className="w-full rounded-xl bg-sand-2/80 px-4 py-3 text-sm text-ink ring-1 ring-ink/15 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber"
-                  />
-                </div>
-                <div className="mt-6">
-                  <label
-                    htmlFor="contact"
-                    className="mb-2 block text-xs font-bold uppercase tracking-wider text-ink/70"
-                  >
-                    Preferred Contact Method
-                  </label>
-                  <div className="flex flex-wrap gap-4">
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="contact"
-                        value="phone"
-                        className="accent-amber"
-                      />
-                      <span className="text-sm text-ink/80">Phone</span>
-                    </label>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="contact"
-                        value="whatsapp"
-                        className="accent-amber"
-                      />
-                      <span className="text-sm text-ink/80">WhatsApp</span>
-                    </label>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <input
-                        type="radio"
-                        name="contact"
-                        value="email"
-                        className="accent-amber"
-                      />
-                      <span className="text-sm text-ink/80">Email</span>
-                    </label>
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  className="mt-8 w-full rounded-xl bg-amber px-6 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  Request My Free Quote
-                </button>
-              </form>
+              <QuoteForm />
             </div>
           </div>
         </div>

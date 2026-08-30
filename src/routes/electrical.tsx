@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
 import heroExtension from "@/assets/hero-extension.jpg";
@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Electrical Services in London — NICEIC Approved Electricians | ARZ Construction";
+const TITLE = "Electrical Services in London â€” NICEIC Approved Electricians | ARZ Construction";
 const DESCRIPTION =
   "Professional electrical services across London. NICEIC approved electricians for full rewires, consumer unit upgrades, smart home installations, and electrical repairs. Fully certified and compliant.";
 
@@ -23,12 +23,12 @@ export const Route = createFileRoute("/electrical")({
   component: Electrical,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
 
 const services = [
   {
-    icon: "🔌",
+    icon: "ðŸ”Œ",
     title: "Full House Rewires",
     description:
       "Complete electrical rewires for older properties. Upgrade to modern standards with new wiring, sockets, and consumer unit.",
@@ -40,7 +40,7 @@ const services = [
     ],
   },
   {
-    icon: "⚡",
+    icon: "âš¡",
     title: "Consumer Unit Upgrades",
     description:
       "Upgrade your fuse box to a modern consumer unit with RCD protection. Essential for safety and compliance with current regulations.",
@@ -52,7 +52,7 @@ const services = [
     ],
   },
   {
-    icon: "💡",
+    icon: "ðŸ’¡",
     title: "Lighting Design & Installation",
     description:
       "From simple downlighters to complex lighting schemes. LED, smart lighting, and decorative installations.",
@@ -64,7 +64,7 @@ const services = [
     ],
   },
   {
-    icon: "🏠",
+    icon: "ðŸ ",
     title: "Smart Home Systems",
     description:
       "Control your lighting, heating, and appliances from your phone. Smart home automation for modern living.",
@@ -76,7 +76,7 @@ const services = [
     ],
   },
   {
-    icon: "🔧",
+    icon: "ðŸ”§",
     title: "Electrical Repairs",
     description:
       "Fault finding and repairs for all electrical issues. Sockets, switches, lighting, and appliance connections.",
@@ -88,7 +88,7 @@ const services = [
     ],
   },
   {
-    icon: "📋",
+    icon: "ðŸ“‹",
     title: "Electrical Certificates",
     description:
       "EICR reports for home buyers, landlords, and insurance. All testing and certification to BS7671 standards.",
@@ -103,32 +103,32 @@ const services = [
 
 const whyChooseUs = [
   {
-    icon: "✅",
+    icon: "âœ…",
     title: "NICEIC Approved",
     description: "Our electricians are NICEIC approved contractors, ensuring the highest standards of work.",
   },
   {
-    icon: "📜",
+    icon: "ðŸ“œ",
     title: "Fully Certified",
     description: "All work comes with appropriate certificates and complies with BS7671 regulations.",
   },
   {
-    icon: "🛡️",
+    icon: "ðŸ›¡ï¸",
     title: "Fully Insured",
     description: "Comprehensive public liability insurance for complete protection.",
   },
   {
-    icon: "💰",
+    icon: "ðŸ’°",
     title: "Fixed-Price Quotes",
     description: "Clear, upfront pricing with no hidden costs. The price we quote is the price you pay.",
   },
   {
-    icon: "🏆",
+    icon: "ðŸ†",
     title: "Experienced Electricians",
     description: "Our team has extensive experience across all types of electrical work.",
   },
   {
-    icon: "📋",
+    icon: "ðŸ“‹",
     title: "Guaranteed Work",
     description: "All work comes with our guarantee for quality assurance.",
   },
@@ -209,7 +209,7 @@ function Electrical() {
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                        ✓
+                        âœ“
                       </span>
                       <span className="text-sm font-medium text-ink/80">{feature}</span>
                     </li>

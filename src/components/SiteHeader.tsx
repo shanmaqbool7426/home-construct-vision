@@ -117,7 +117,7 @@ export function SiteHeader() {
               {SITE.phoneDisplay}
             </a>
             <a
-              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-amber px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-copper hover:shadow-lg hover:-translate-y-0.5"
+              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-[#20bd5a] hover:shadow-lg hover:-translate-y-0.5"
               href={`https://wa.me/${SITE.whatsapp}`}
               target="_blank"
               rel="noreferrer"

@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Privacy & Cookie Policy — ARZ Construction Ltd";
+const TITLE = "Privacy & Cookie Policy â€” ARZ Construction Ltd";
 const DESCRIPTION = "Privacy and cookie policy for ARZ Construction Ltd website.";
 
 export const Route = createFileRoute("/privacy")({
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/privacy")({
   component: Privacy,
 });
 
-const PHONE_DISPLAY = "020 7946 0000";
+const PHONE_DISPLAY = "+44 7860 135189";
 
 function Privacy() {
   return (
@@ -97,7 +97,7 @@ function Privacy() {
                 ARZ Construction Ltd<br />
                 4th Floor, Silverstream House<br />
                 45 Fitzroy Street, Fitzrovia<br />
-                London, W1T 6EB<br />
+                London<br />
                 Phone: {PHONE_DISPLAY}
               </address>
             </div>

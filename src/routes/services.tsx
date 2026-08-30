@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import heroExtension from "@/assets/hero-extension.jpg";
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Our Services — ARZ Construction Ltd | Complete Design & Build Solutions";
+const TITLE = "Our Services â€” ARZ Construction Ltd | Complete Design & Build Solutions";
 const DESCRIPTION =
   "Comprehensive construction services across London: extensions, loft conversions, renovations, kitchens, bathrooms, plumbing, electrical, roofing, and more. Fixed-price quotes, 10-year guarantee.";
 
@@ -24,8 +24,8 @@ export const Route = createFileRoute("/services")({
   component: Services,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
 
 const services = [
   {
@@ -144,32 +144,32 @@ const services = [
 
 const benefits = [
   {
-    icon: "📋",
+    icon: "ðŸ“‹",
     title: "Fixed-Price Quotes",
     description: "Line-by-line quotations with no hidden costs. The price we quote is the price you pay.",
   },
   {
-    icon: "👷",
+    icon: "ðŸ‘·",
     title: "Dedicated Project Manager",
     description: "Your single point of contact from initial consultation to final handover.",
   },
   {
-    icon: "🛡️",
+    icon: "ðŸ›¡ï¸",
     title: "10-Year Guarantee",
     description: "All structural work comes with our comprehensive 10-year structural guarantee.",
   },
   {
-    icon: "✅",
+    icon: "âœ…",
     title: "Fully Insured",
     description: "Public liability and builder's risk insurance for complete peace of mind.",
   },
   {
-    icon: "📊",
+    icon: "ðŸ“Š",
     title: "Weekly Progress Reports",
     description: "Regular updates and site meetings keep you informed throughout your project.",
   },
   {
-    icon: "🏆",
+    icon: "ðŸ†",
     title: "Accredited Professionals",
     description: "Gas Safe, NICEIC, FMB, and TrustMark registered for your assurance.",
   },
@@ -192,7 +192,7 @@ function Services() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-ink/75">
               From initial design to final finishes, we provide comprehensive construction services
-              across London. One accountable team for your entire project — no subcontracting, no
+              across London. One accountable team for your entire project â€” no subcontracting, no
               surprises.
             </p>
           </div>
@@ -236,7 +236,7 @@ function Services() {
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                          ✓
+                          âœ“
                         </span>
                         <span className="text-sm font-medium text-ink/80">{feature}</span>
                       </li>
@@ -248,7 +248,7 @@ function Services() {
                       className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
                     >
                       <span>Learn More</span>
-                      <span>→</span>
+                      <span>â†’</span>
                     </a>
                   </div>
                 </div>

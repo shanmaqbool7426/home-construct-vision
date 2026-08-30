@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import heroExtension from "@/assets/hero-extension.jpg";
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "About Us — ARZ Construction Ltd | London's Trusted Design & Build Specialists";
+const TITLE = "About Us â€” ARZ Construction Ltd | London's Trusted Design & Build Specialists";
 const DESCRIPTION =
   "Established in 2011, ARZ Construction Ltd is a London-based design and build company specializing in extensions, loft conversions, and luxury home renovations. Fully insured, 10-year guarantee.";
 
@@ -24,9 +24,9 @@ export const Route = createFileRoute("/about")({
   component: About,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const companyStats = [
   { number: "15+", label: "Years Experience" },
@@ -37,25 +37,25 @@ const companyStats = [
 
 const values = [
   {
-    icon: "🏛️",
+    icon: "ðŸ›ï¸",
     title: "Architectural Excellence",
     description:
       "Every project begins with meticulous design. We combine traditional craftsmanship with contemporary innovation to create spaces that stand the test of time.",
   },
   {
-    icon: "🤝",
+    icon: "ðŸ¤",
     title: "Transparent Partnership",
     description:
       "Fixed-price quotes, weekly progress reports, and a dedicated project manager ensure you're informed and in control throughout your build journey.",
   },
   {
-    icon: "🛡️",
+    icon: "ðŸ›¡ï¸",
     title: "Uncompromising Quality",
     description:
       "From structural steelwork to final finishes, we use only premium materials and accredited tradespeople. Every detail is inspected to meet our exacting standards.",
   },
   {
-    icon: "⏱️",
+    icon: "â±ï¸",
     title: "On-Time Delivery",
     description:
       "Our track record speaks for itself. 95% of projects complete on schedule, with detailed timelines and proactive project management from day one.",
@@ -158,7 +158,7 @@ function About() {
                 </p>
                 <p>
                   Over the past 15 years, we've completed more than 500 projects across London and
-                  the Home Counties — from modest bathroom refurbishments to ambitious whole-house
+                  the Home Counties â€” from modest bathroom refurbishments to ambitious whole-house
                   renovations and architectural extensions. Each project has strengthened our
                   commitment to quality, transparency, and client care.
                 </p>
@@ -288,7 +288,7 @@ function About() {
                 {certifications.map((cert) => (
                   <li key={cert} className="flex items-center gap-3">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber">
-                      ✓
+                      âœ“
                     </span>
                     <span className="text-sm font-semibold text-ink/85">{cert}</span>
                   </li>

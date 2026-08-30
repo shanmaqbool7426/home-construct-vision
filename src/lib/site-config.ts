@@ -1,13 +1,14 @@
 export const SITE = {
-  companyName: "ARZ Construction Ltd",
-  phone: "02079460000",
-  phoneDisplay: "020 7946 0000",
-  whatsapp: "447700900000",
-  email: "info@arzconstruction.co.uk",
+  companyName: "ARZ CONSTRUCTION LTD",
+  companyNumber: "12858978",
+  phone: "447860135189",
+  phoneDisplay: "+44 7860 135189",
+  whatsapp: "447860135189",
+  email: "Arzconstruction23@gmail.com",
   addressLines: [
     "4th Floor, Silverstream House",
-    "45 Fitzroy Street, Fitzrovia",
-    "London, W1T 6EB",
+    "45 Fitzroy Street",
+    "Fitzrovia, London",
   ],
 };
 

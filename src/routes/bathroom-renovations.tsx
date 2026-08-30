@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
 import heroExtension from "@/assets/hero-extension.jpg";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Bathroom Renovations in London — Luxury Bathrooms & Wetrooms | ARZ Construction";
+const TITLE = "Bathroom Renovations in London â€” Luxury Bathrooms & Wetrooms | ARZ Construction";
 const DESCRIPTION =
   "Professional bathroom renovation services across London. Luxury bathrooms, wetrooms, ensuites, and cloakrooms. Microcement finishes, freestanding baths, and premium brassware. Fixed-price quotes.";
 
@@ -24,8 +24,8 @@ export const Route = createFileRoute("/bathroom-renovations")({
   component: BathroomRenovations,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
 
 const bathroomTypes = [
   {
@@ -80,37 +80,37 @@ const bathroomTypes = [
 
 const services = [
   {
-    icon: "📐",
+    icon: "ðŸ“",
     title: "Bathroom Design",
     description:
       "Our designers create bathrooms that combine beauty with functionality. From initial concept to detailed plans and 3D visuals.",
   },
   {
-    icon: "🔨",
+    icon: "ðŸ”¨",
     title: "Complete Installation",
     description:
       "Full bathroom fitting service including plumbing, electrics, tiling, and decorating. One team handles everything from start to finish.",
   },
   {
-    icon: "🚿",
+    icon: "ðŸš¿",
     title: "Shower Installations",
     description:
       "From electric showers to digital mixer systems and rainfall showers. Professional installation with guaranteed water pressure.",
   },
   {
-    icon: "🪞",
+    icon: "ðŸªž",
     title: "Tanking & Waterproofing",
     description:
       "Professional tanking systems for wetrooms and bathrooms. Ensure your bathroom is fully waterproofed and protected.",
   },
   {
-    icon: "🔥",
+    icon: "ðŸ”¥",
     title: "Underfloor Heating",
     description:
       "Electric or wet underfloor heating systems. Luxury comfort with energy-efficient operation.",
   },
   {
-    icon: "🎨",
+    icon: "ðŸŽ¨",
     title: "Tiling & Finishes",
     description:
       "Professional tiling service with natural stone, porcelain, ceramic, or microcement. Precision cutting and flawless finishes.",
@@ -225,7 +225,7 @@ function BathroomRenovations() {
                     {type.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                          ✓
+                          âœ“
                         </span>
                         <span className="text-sm font-medium text-ink/80">{feature}</span>
                       </li>
@@ -286,7 +286,7 @@ function BathroomRenovations() {
                 {features.map((feature) => (
                   <div key={feature.title} className="flex items-start gap-3">
                     <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                      ✓
+                      âœ“
                     </span>
                     <div>
                       <h4 className="font-serif font-bold text-ink">{feature.title}</h4>

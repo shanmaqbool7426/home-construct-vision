@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import heroExtension from "@/assets/hero-extension.jpg";
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "House Renovations in London — ARZ Construction Ltd";
+const TITLE = "House Renovations in London â€” ARZ Construction Ltd";
 const DESCRIPTION =
   "Complete house renovation services across London. Structural refurbishments, period property restoration, open-plan conversions, and full home transformations. Fixed-price quotes, 10-year guarantee.";
 
@@ -24,9 +24,9 @@ export const Route = createFileRoute("/house-renovations")({
   component: HouseRenovations,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const renovationTypes = [
   {
@@ -116,32 +116,32 @@ const process = [
 
 const benefits = [
   {
-    icon: "🏠",
+    icon: "ðŸ ",
     title: "Increase Property Value",
     description: "A well-executed renovation can increase your property's value by 20-30% or more.",
   },
   {
-    icon: "⚡",
+    icon: "âš¡",
     title: "Improve Energy Efficiency",
     description: "Upgrade insulation, windows, and heating systems to reduce energy bills and carbon footprint.",
   },
   {
-    icon: "🎨",
+    icon: "ðŸŽ¨",
     title: "Create Your Dream Home",
     description: "Transform your existing property into the home you've always wanted without the hassle of moving.",
   },
   {
-    icon: "🛡️",
+    icon: "ðŸ›¡ï¸",
     title: "Fix Structural Issues",
     description: "Address subsidence, damp, rot, and other structural problems before they become worse.",
   },
   {
-    icon: "📐",
+    icon: "ðŸ“",
     title: "Optimise Space",
     description: "Reconfigure layouts to make better use of your existing space with open-plan living.",
   },
   {
-    icon: "✅",
+    icon: "âœ…",
     title: "Modern Standards",
     description: "Upgrade to modern building standards with new electrics, plumbing, and insulation.",
   },
@@ -236,7 +236,7 @@ function HouseRenovations() {
                     {type.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                          ✓
+                          âœ“
                         </span>
                         <span className="text-sm font-medium text-ink/80">{feature}</span>
                       </li>
@@ -288,7 +288,7 @@ function HouseRenovations() {
               Benefits of House Renovation
             </h2>
             <p className="mt-4 text-base text-ink/70">
-              Transform your existing home rather than moving — often more cost-effective and less stressful.
+              Transform your existing home rather than moving â€” often more cost-effective and less stressful.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

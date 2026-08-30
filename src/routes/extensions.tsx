@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import heroExtension from "@/assets/hero-extension.jpg";
 import afterExtension from "@/assets/after-extension.jpg";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "House Extensions in London — Rear, Side & Wraparound Extensions | ARZ Construction";
+const TITLE = "House Extensions in London â€” Rear, Side & Wraparound Extensions | ARZ Construction";
 const DESCRIPTION =
   "Professional house extension services across London. Rear, side, and wraparound extensions with fixed-price quotes. Structural steelwork, full-height glazing, and architectural finishes. 10-year guarantee.";
 
@@ -24,9 +24,9 @@ export const Route = createFileRoute("/extensions")({
   component: Extensions,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const extensionTypes = [
   {
@@ -81,40 +81,40 @@ const extensionTypes = [
 
 const considerations = [
   {
-    icon: "📋",
+    icon: "ðŸ“‹",
     title: "Planning Permission",
     description:
       "Many extensions fall under Permitted Development rights, but we handle all planning applications when required. We'll advise on the best approach for your project.",
   },
   {
-    icon: "🏗️",
+    icon: "ðŸ—ï¸",
     title: "Building Regulations",
     description:
       "All structural work must comply with building regulations. We handle all applications, inspections, and sign-offs to ensure your extension is safe and compliant.",
   },
   {
-    icon: "🔩",
+    icon: "ðŸ”©",
     title: "Structural Steelwork",
     description:
       "Most extensions require structural steel beams to support the new structure. Our engineers design and specify all steelwork to ensure structural integrity.",
   },
   {
-    icon: "💡",
+    icon: "ðŸ’¡",
     title: "Design & Glazing",
     description:
       "From traditional brick-and-mortar to contemporary full-height glazing, we design extensions that maximize natural light and complement your property's architecture.",
   },
   {
-    icon: "⏱️",
+    icon: "â±ï¸",
     title: "Project Timeline",
     description:
       "Most single-storey extensions take 10-14 weeks to complete. We provide detailed timelines and keep you informed with weekly progress reports.",
   },
   {
-    icon: "💰",
+    icon: "ðŸ’°",
     title: "Fixed-Price Quotes",
     description:
-      "Receive a comprehensive line-by-line quotation with no hidden costs. The price we quote is the price you pay — guaranteed.",
+      "Receive a comprehensive line-by-line quotation with no hidden costs. The price we quote is the price you pay â€” guaranteed.",
   },
 ];
 
@@ -198,7 +198,7 @@ function Extensions() {
                     {type.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                          ✓
+                          âœ“
                         </span>
                         <span className="text-sm font-medium text-ink/80">{feature}</span>
                       </li>

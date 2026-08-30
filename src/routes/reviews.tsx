@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Customer Reviews — ARZ Construction Ltd | What Our Clients Say";
+const TITLE = "Customer Reviews â€” ARZ Construction Ltd | What Our Clients Say";
 const DESCRIPTION =
   "Read genuine reviews from our satisfied clients across London. See why homeowners trust ARZ Construction for their extensions, loft conversions, and renovations.";
 
@@ -20,9 +20,9 @@ export const Route = createFileRoute("/reviews")({
   component: Reviews,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const reviews = [
   {
@@ -100,7 +100,7 @@ function Reviews() {
               <div key={review.name} className="luxury-card rounded-2xl p-8 flex flex-col">
                 <div className="flex gap-1 text-amber mb-4">
                   {Array.from({ length: review.rating }).map((_, i) => (
-                    <span key={i}>★</span>
+                    <span key={i}>â˜…</span>
                   ))}
                 </div>
                 <blockquote className="text-base leading-relaxed text-ink/85 font-normal flex-1">

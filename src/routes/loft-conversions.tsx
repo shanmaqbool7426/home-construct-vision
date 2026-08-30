@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import loftConversion from "@/assets/loft-conversion.jpg";
 import heroExtension from "@/assets/hero-extension.jpg";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Loft Conversions in London — Dormer, Velux & Hip-to-Gable | ARZ Construction";
+const TITLE = "Loft Conversions in London â€” Dormer, Velux & Hip-to-Gable | ARZ Construction";
 const DESCRIPTION =
   "Professional loft conversion services across London. Dormer, Velux, and hip-to-gable conversions creating master bedrooms, home offices, and guest suites. Fixed-price quotes, 10-year guarantee.";
 
@@ -24,9 +24,9 @@ export const Route = createFileRoute("/loft-conversions")({
   component: LoftConversions,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const loftTypes = [
   {
@@ -81,37 +81,37 @@ const loftTypes = [
 
 const benefits = [
   {
-    icon: "📈",
+    icon: "ðŸ“ˆ",
     title: "Add 20% to Property Value",
     description:
       "A well-designed loft conversion can increase your property's value by up to 20%, making it one of the best home improvement investments.",
   },
   {
-    icon: "🛏️",
+    icon: "ðŸ›ï¸",
     title: "Create Additional Bedrooms",
     description:
       "Transform unused loft space into a master bedroom with ensuite, additional bedrooms for growing families, or a self-contained guest suite.",
   },
   {
-    icon: "🏠",
+    icon: "ðŸ ",
     title: "Home Office or Studio",
     description:
       "Create a quiet, separate workspace away from the main living areas. Perfect for remote working or creative pursuits.",
   },
   {
-    icon: "💡",
+    icon: "ðŸ’¡",
     title: "Maximize Natural Light",
     description:
       "Strategic window placement and roof lights flood your new space with natural light, creating a bright and airy environment.",
   },
   {
-    icon: "📐",
+    icon: "ðŸ“",
     title: "Utilize Unused Space",
     description:
       "Most London lofts are completely unused. Convert this dead space into valuable living accommodation without extending your footprint.",
   },
   {
-    icon: "✅",
+    icon: "âœ…",
     title: "No Garden Sacrifice",
     description:
       "Unlike ground-floor extensions, loft conversions don't sacrifice any of your valuable outdoor space.",
@@ -237,7 +237,7 @@ function LoftConversions() {
                     {type.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2">
                         <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                          ✓
+                          âœ“
                         </span>
                         <span className="text-sm font-medium text-ink/80">{feature}</span>
                       </li>

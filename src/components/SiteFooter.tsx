@@ -36,7 +36,7 @@ export function SiteFooter() {
               <p className="mt-3">
                 Registered in England &amp; Wales
                 <br />
-                Company details available on request
+                Company No. {SITE.companyNumber}
               </p>
             </div>
           </div>

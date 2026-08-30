@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import heroExtension from "@/assets/hero-extension.jpg";
 import loftConversion from "@/assets/loft-conversion.jpg";
@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Other Building Services in London — Roofing, Plastering, Tiling & Decorating | ARZ Construction";
+const TITLE = "Other Building Services in London â€” Roofing, Plastering, Tiling & Decorating | ARZ Construction";
 const DESCRIPTION =
   "Comprehensive building services across London. Roofing, plastering, tiling, and decorating services. Professional finishing trades for complete construction projects. Fixed-price quotes.";
 
@@ -24,13 +24,13 @@ export const Route = createFileRoute("/other-services")({
   component: OtherServices,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
 
 const services = [
   {
     category: "Roofing Services",
-    icon: "🏠",
+    icon: "ðŸ ",
     items: [
       {
         title: "Roof Repairs",
@@ -52,7 +52,7 @@ const services = [
   },
   {
     category: "Plastering Services",
-    icon: "🔨",
+    icon: "ðŸ”¨",
     items: [
       {
         title: "Internal Plastering",
@@ -74,7 +74,7 @@ const services = [
   },
   {
     category: "Tiling Services",
-    icon: "🎨",
+    icon: "ðŸŽ¨",
     items: [
       {
         title: "Floor Tiling",
@@ -96,7 +96,7 @@ const services = [
   },
   {
     category: "Decorating Services",
-    icon: "🖌️",
+    icon: "ðŸ–Œï¸",
     items: [
       {
         title: "Interior Painting",
@@ -182,7 +182,7 @@ function OtherServices() {
                   {service.items.map((item) => (
                     <div key={item.title} className="flex items-start gap-3">
                       <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                        ✓
+                        âœ“
                       </span>
                       <div>
                         <h4 className="font-serif font-bold text-ink">{item.title}</h4>
@@ -207,32 +207,32 @@ function OtherServices() {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  icon: "👷",
+                  icon: "ðŸ‘·",
                   title: "Skilled Tradespeople",
                   description: "Experienced professionals in all finishing trades.",
                 },
                 {
-                  icon: "✅",
+                  icon: "âœ…",
                   title: "Quality Guaranteed",
                   description: "All work comes with our quality guarantee.",
                 },
                 {
-                  icon: "💰",
+                  icon: "ðŸ’°",
                   title: "Fixed Pricing",
                   description: "Clear, upfront pricing with no hidden costs.",
                 },
                 {
-                  icon: "📋",
+                  icon: "ðŸ“‹",
                   title: "Complete Projects",
                   description: "All finishing trades under one roof for convenience.",
                 },
                 {
-                  icon: "🛡️",
+                  icon: "ðŸ›¡ï¸",
                   title: "Fully Insured",
                   description: "Comprehensive insurance for complete protection.",
                 },
                 {
-                  icon: "⏱️",
+                  icon: "â±ï¸",
                   title: "On-Time Delivery",
                   description: "We complete work on schedule, every time.",
                 },

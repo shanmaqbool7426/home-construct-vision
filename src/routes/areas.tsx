@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Areas We Cover — ARZ Construction Ltd | London Construction Services";
+const TITLE = "Areas We Cover â€” ARZ Construction Ltd | London Construction Services";
 const DESCRIPTION =
   "ARZ Construction provides construction services across London and surrounding areas. Extensions, loft conversions, and renovations in Bromley, Croydon, Dulwich, Richmond, Greenwich, and more.";
 
@@ -20,9 +20,9 @@ export const Route = createFileRoute("/areas")({
   component: Areas,
 });
 
-const PHONE = "02079460000";
-const PHONE_DISPLAY = "020 7946 0000";
-const WHATSAPP = "447700900000";
+const PHONE = "447860135189";
+const PHONE_DISPLAY = "+44 7860 135189";
+const WHATSAPP = "447860135189";
 
 const areas = [
   { name: "Bromley", description: "Extensions, lofts, and renovations across Bromley and surrounding areas." },
@@ -81,7 +81,7 @@ function Areas() {
             {areas.map((area) => (
               <div key={area.name} className="luxury-card rounded-2xl p-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">📍</span>
+                  <span className="text-2xl">ðŸ“</span>
                   <h3 className="font-serif text-xl font-bold text-ink">{area.name}</h3>
                 </div>
                 <p className="text-sm text-ink/70 leading-relaxed">{area.description}</p>
