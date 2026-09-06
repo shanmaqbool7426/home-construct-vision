@@ -16,18 +16,30 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "Plumbing Services London  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "Gas Safe registered plumbing, heating, boiler installation, and unvented hot water systems across London. Emergency plumbing and full house re-plumbing.";
+import { buildSeoMeta, buildCanonical, absoluteUrl, SITE_URL } from "@/lib/seo";
 
 export const Route = createFileRoute("/plumbing")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "Plumbing Services London — LOPO CONSTRUCTION LIMITED",
+      description: "Gas Safe registered plumbing, heating, boiler installation, and unvented hot water systems across London. Emergency plumbing and full house re-plumbing.",
+      path: "/plumbing",
+    }),
+    links: buildCanonical("/plumbing"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Plumbing Services",
+          description: "Gas Safe registered plumbing, heating, boiler installation, and unvented hot water systems across London.",
+          provider: { "@id": `${SITE_URL}/#organisation` },
+          url: absoluteUrl("/plumbing"),
+          areaServed: { "@type": "Place", name: "London and surrounding counties" },
+          serviceType: "Plumbing",
+        }),
+      },
     ],
   }),
   component: Plumbing,

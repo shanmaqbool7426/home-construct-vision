@@ -18,19 +18,16 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "Our Services  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "Comprehensive construction services across London: house extensions, loft conversions, kitchen and bathroom renovations, plumbing and electrical work.";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-    ],
+    meta: buildSeoMeta({
+      title: "Our Services — LOPO CONSTRUCTION LIMITED | London Construction",
+      description: "Comprehensive construction services across London: house extensions, loft conversions, kitchen and bathroom renovations, plumbing and electrical work.",
+      path: "/services",
+    }),
+    links: buildCanonical("/services"),
   }),
   component: Services,
 });

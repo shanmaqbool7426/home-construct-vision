@@ -6,19 +6,16 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "Contact LOPO CONSTRUCTION LIMITED — Free Quote & Consultation";
-const DESCRIPTION =
-  "Get in touch with LOPO CONSTRUCTION LIMITED for a free quote and consultation. London's trusted construction specialists for extensions, loft conversions, and renovations.";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-    ],
+    meta: buildSeoMeta({
+      title: "Contact LOPO CONSTRUCTION LIMITED — Free Quote & Consultation",
+      description: "Get in touch with LOPO CONSTRUCTION LIMITED for a free quote and consultation. London's trusted construction specialists for extensions, loft conversions, and renovations.",
+      path: "/contact",
+    }),
+    links: buildCanonical("/contact"),
   }),
   component: Contact,
 });

@@ -20,18 +20,31 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "Kitchen Renovations London  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "Bespoke kitchen renovations and fitting across London. Custom joinery, marble islands, structural steelwork, plumbing and electrics. Fixed-price quote.";
+import { buildSeoMeta, buildCanonical, absoluteUrl, SITE_URL } from "@/lib/seo";
 
 export const Route = createFileRoute("/kitchen-renovations")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "Kitchen Renovations London — LOPO CONSTRUCTION LIMITED",
+      description: "Bespoke kitchen renovations and fitting across London. Custom joinery, marble islands, structural steelwork, plumbing and electrics. Fixed-price quote.",
+      path: "/kitchen-renovations",
+      ogImage: kitchenRenovation,
+    }),
+    links: buildCanonical("/kitchen-renovations"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Kitchen Renovations",
+          description: "Bespoke kitchen renovations and fitting across London.",
+          provider: { "@id": `${SITE_URL}/#organisation` },
+          url: absoluteUrl("/kitchen-renovations"),
+          areaServed: { "@type": "Place", name: "London and surrounding counties" },
+          serviceType: "Kitchen Renovations",
+        }),
+      },
     ],
   }),
   component: KitchenRenovations,

@@ -3,18 +3,31 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
-
-const TITLE = "Frequently Asked Questions  LOPO Construction Ltd | London Construction FAQs";
-const DESCRIPTION =
-  "Find answers to common questions about our construction services. Extensions, loft conversions, renovations, quotes, timelines, and more.";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/faq")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "Frequently Asked Questions — LOPO Construction Ltd | London Construction FAQs",
+      description: "Find answers to common questions about our construction services. Extensions, loft conversions, renovations, quotes, timelines, and more.",
+      path: "/faq",
+    }),
+    links: buildCanonical("/faq"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.flatMap((cat) =>
+            cat.questions.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          ),
+        }),
+      },
     ],
   }),
   component: FAQ,

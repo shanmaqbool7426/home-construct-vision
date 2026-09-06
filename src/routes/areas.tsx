@@ -3,19 +3,16 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
-
-const TITLE = "Areas We Cover  LOPO Construction Ltd | London Construction Services";
-const DESCRIPTION =
-  "LOPO Construction provides construction services across London and surrounding areas. Extensions, loft conversions, and renovations in Bromley, Croydon, Dulwich, Richmond, Greenwich, and more.";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/areas")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-    ],
+    meta: buildSeoMeta({
+      title: "Areas We Cover — LOPO Construction Ltd | London Construction Services",
+      description: "LOPO Construction provides construction services across London and surrounding areas. Extensions, loft conversions, and renovations in Bromley, Croydon, Dulwich, Richmond, Greenwich, and more.",
+      path: "/areas",
+    }),
+    links: buildCanonical("/areas"),
   }),
   component: Areas,
 });

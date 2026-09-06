@@ -15,18 +15,30 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "Building & Construction Services London  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "Roofing, plastering, tiling, carpentry, painting, and decorating across London. Comprehensive building services for homeowners.";
+import { buildSeoMeta, buildCanonical, absoluteUrl, SITE_URL } from "@/lib/seo";
 
 export const Route = createFileRoute("/other-services")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "Building & Construction Services London — LOPO CONSTRUCTION LIMITED",
+      description: "Roofing, plastering, tiling, carpentry, painting, and decorating across London. Comprehensive building services for homeowners.",
+      path: "/other-services",
+    }),
+    links: buildCanonical("/other-services"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Other Building Services",
+          description: "Roofing, plastering, tiling, carpentry, painting, and decorating across London.",
+          provider: { "@id": `${SITE_URL}/#organisation` },
+          url: absoluteUrl("/other-services"),
+          areaServed: { "@type": "Place", name: "London and surrounding counties" },
+          serviceType: "Building Services",
+        }),
+      },
     ],
   }),
   component: OtherServices,

@@ -1,3 +1,8 @@
+# LOPO CONSTRUCTION LIMITED — Robots.txt
+# Domain: https://www.lopoconstruction.co.uk
+
+Sitemap: https://www.lopoconstruction.co.uk/sitemap.xml
+
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +17,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_server/

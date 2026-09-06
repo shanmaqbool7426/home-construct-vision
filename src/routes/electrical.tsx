@@ -14,18 +14,30 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "Electrical Services London  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "NICEIC approved electrical rewiring, consumer unit upgrades, EV chargers, and architectural lighting across London. Certified electrical installations.";
+import { buildSeoMeta, buildCanonical, absoluteUrl, SITE_URL } from "@/lib/seo";
 
 export const Route = createFileRoute("/electrical")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "Electrical Services London — LOPO CONSTRUCTION LIMITED",
+      description: "NICEIC approved electrical rewiring, consumer unit upgrades, EV chargers, and architectural lighting across London. Certified electrical installations.",
+      path: "/electrical",
+    }),
+    links: buildCanonical("/electrical"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Electrical Services",
+          description: "NICEIC approved electrical rewiring, consumer unit upgrades, EV chargers, and architectural lighting across London.",
+          provider: { "@id": `${SITE_URL}/#organisation` },
+          url: absoluteUrl("/electrical"),
+          areaServed: { "@type": "Place", name: "London and surrounding counties" },
+          serviceType: "Electrical Services",
+        }),
+      },
     ],
   }),
   component: Electrical,

@@ -9,19 +9,16 @@ import beforeExtension from "@/assets/before-extension.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
-
-const TITLE = "Projects & Gallery  LOPO Construction Ltd | Recent London Construction Projects";
-const DESCRIPTION =
-  "View our portfolio of recently completed construction projects across London. Extensions, loft conversions, kitchen and bathroom renovations. Before and after photos.";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-    ],
+    meta: buildSeoMeta({
+      title: "Projects & Gallery — LOPO Construction Ltd | Recent London Construction Projects",
+      description: "View our portfolio of recently completed construction projects across London. Extensions, loft conversions, kitchen and bathroom renovations. Before and after photos.",
+      path: "/projects",
+    }),
+    links: buildCanonical("/projects"),
   }),
   component: Projects,
 });

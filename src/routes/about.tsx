@@ -7,19 +7,16 @@ import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
-
-const TITLE = "About Us  LOPO Construction Ltd | London's Trusted Design & Build Specialists";
-const DESCRIPTION =
-  "Established in 2011, LOPO Construction Ltd is a London-based design and build company specializing in extensions, loft conversions, and luxury home renovations. Fully insured, 10-year guarantee.";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-    ],
+    meta: buildSeoMeta({
+      title: "About Us — LOPO Construction Ltd | London's Trusted Design & Build Specialists",
+      description: "Established in 2011, LOPO Construction Ltd is a London-based design and build company specializing in extensions, loft conversions, and luxury home renovations. Fully insured, 10-year guarantee.",
+      path: "/about",
+    }),
+    links: buildCanonical("/about"),
   }),
   component: About,
 });

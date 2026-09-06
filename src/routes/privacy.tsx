@@ -3,16 +3,16 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
-
-const TITLE = "Privacy & Cookie Policy  LOPO Construction Ltd";
-const DESCRIPTION = "Privacy and cookie policy for LOPO Construction Ltd website.";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-    ],
+    meta: buildSeoMeta({
+      title: "Privacy & Cookie Policy — LOPO Construction Ltd",
+      description: "Privacy and cookie policy for LOPO Construction Ltd website.",
+      path: "/privacy",
+    }),
+    links: buildCanonical("/privacy"),
   }),
   component: Privacy,
 });

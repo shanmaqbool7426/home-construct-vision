@@ -19,18 +19,31 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "Bathroom Renovations London  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "Luxury bathroom refurbishments and wetrooms across London. Microcement, marble tiling, freestanding stone tubs, brushed brass fittings. Fixed-price quote.";
+import { buildSeoMeta, buildCanonical, absoluteUrl, SITE_URL } from "@/lib/seo";
 
 export const Route = createFileRoute("/bathroom-renovations")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "Bathroom Renovations London — LOPO CONSTRUCTION LIMITED",
+      description: "Luxury bathroom refurbishments and wetrooms across London. Microcement, marble tiling, freestanding stone tubs, brushed brass fittings. Fixed-price quote.",
+      path: "/bathroom-renovations",
+      ogImage: bathroomRenovation,
+    }),
+    links: buildCanonical("/bathroom-renovations"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Bathroom Renovations",
+          description: "Luxury bathroom refurbishments and wetrooms across London.",
+          provider: { "@id": `${SITE_URL}/#organisation` },
+          url: absoluteUrl("/bathroom-renovations"),
+          areaServed: { "@type": "Place", name: "London and surrounding counties" },
+          serviceType: "Bathroom Renovations",
+        }),
+      },
     ],
   }),
   component: BathroomRenovations,

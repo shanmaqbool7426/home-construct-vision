@@ -19,18 +19,31 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "House Renovations London  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "Full house renovations, structural alterations, and complete home refurbishments across London. Dedicated project manager & 10-year guarantee.";
+import { buildSeoMeta, buildCanonical, absoluteUrl, SITE_URL } from "@/lib/seo";
 
 export const Route = createFileRoute("/house-renovations")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "House Renovations London — LOPO CONSTRUCTION LIMITED",
+      description: "Full house renovations, structural alterations, and complete home refurbishments across London. Dedicated project manager & 10-year guarantee.",
+      path: "/house-renovations",
+      ogImage: kitchenRenovation,
+    }),
+    links: buildCanonical("/house-renovations"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "House Renovations",
+          description: "Full house renovations, structural alterations, and complete home refurbishments across London.",
+          provider: { "@id": `${SITE_URL}/#organisation` },
+          url: absoluteUrl("/house-renovations"),
+          areaServed: { "@type": "Place", name: "London and surrounding counties" },
+          serviceType: "House Renovations",
+        }),
+      },
     ],
   }),
   component: HouseRenovations,

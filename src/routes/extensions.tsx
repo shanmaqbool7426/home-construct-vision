@@ -18,18 +18,31 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "House Extensions London  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "Single storey, double storey, rear and wraparound house extensions across London. Structural steelwork, planning permission & building regs managed.";
+import { buildSeoMeta, buildCanonical, absoluteUrl, SITE_URL } from "@/lib/seo";
 
 export const Route = createFileRoute("/extensions")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "House Extensions London — LOPO CONSTRUCTION LIMITED",
+      description: "Single storey, double storey, rear and wraparound house extensions across London. Structural steelwork, planning permission & building regs managed.",
+      path: "/extensions",
+      ogImage: afterExtension,
+    }),
+    links: buildCanonical("/extensions"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "House Extensions",
+          description: "Single storey, double storey, rear and wraparound house extensions across London.",
+          provider: { "@id": `${SITE_URL}/#organisation` },
+          url: absoluteUrl("/extensions"),
+          areaServed: { "@type": "Place", name: "London and surrounding counties" },
+          serviceType: "House Extensions",
+        }),
+      },
     ],
   }),
   component: Extensions,

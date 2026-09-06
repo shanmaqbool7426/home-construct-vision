@@ -3,16 +3,16 @@
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
-
-const TITLE = "Terms & Conditions  LOPO Construction Ltd";
-const DESCRIPTION = "Terms and conditions for LOPO Construction Ltd services.";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-    ],
+    meta: buildSeoMeta({
+      title: "Terms & Conditions — LOPO Construction Ltd",
+      description: "Terms and conditions for LOPO Construction Ltd services.",
+      path: "/terms",
+    }),
+    links: buildCanonical("/terms"),
   }),
   component: Terms,
 });

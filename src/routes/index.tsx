@@ -23,18 +23,16 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SITE } from "@/lib/site-config";
+import { buildSeoMeta, buildCanonical } from "@/lib/seo";
 
-const TITLE = "LOPO CONSTRUCTION LIMITED - Extensions, Loft Conversions & Renovations in London";
-const DESCRIPTION = "London construction specialists. Extensions, loft conversions, kitchens, bathrooms, plumbing and electrics - fixed-price quotes, fully insured, 10-year guarantee.";
-
-export const Route = createFileRoute("/")(  {
+export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-    ],
+    meta: buildSeoMeta({
+      title: "LOPO CONSTRUCTION LIMITED — Extensions, Loft Conversions & Renovations in London",
+      description: "London construction specialists. Extensions, loft conversions, kitchens, bathrooms, plumbing and electrics — fixed-price quotes, fully insured, 10-year guarantee.",
+      path: "/",
+    }),
+    links: buildCanonical("/"),
   }),
   component: Index,
 });

@@ -18,18 +18,31 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 import { SITE } from "@/lib/site-config";
-
-const TITLE = "Loft Conversions London  LOPO CONSTRUCTION LIMITED";
-const DESCRIPTION =
-  "Dormer, Velux, hip-to-gable, and mansard loft conversions across London. Master bedroom en-suites, skylights, structural steelwork. Fixed-price quote.";
+import { buildSeoMeta, buildCanonical, absoluteUrl, SITE_URL } from "@/lib/seo";
 
 export const Route = createFileRoute("/loft-conversions")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
+    meta: buildSeoMeta({
+      title: "Loft Conversions London — LOPO CONSTRUCTION LIMITED",
+      description: "Dormer, Velux, hip-to-gable, and mansard loft conversions across London. Master bedroom en-suites, skylights, structural steelwork. Fixed-price quote.",
+      path: "/loft-conversions",
+      ogImage: loftConversion,
+    }),
+    links: buildCanonical("/loft-conversions"),
+    scripts: [
+      {
+        type: "application/ld+json" as const,
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Loft Conversions",
+          description: "Dormer, Velux, hip-to-gable, and mansard loft conversions across London.",
+          provider: { "@id": `${SITE_URL}/#organisation` },
+          url: absoluteUrl("/loft-conversions"),
+          areaServed: { "@type": "Place", name: "London and surrounding counties" },
+          serviceType: "Loft Conversions",
+        }),
+      },
     ],
   }),
   component: LoftConversions,
