@@ -1,6 +1,6 @@
 ﻿import { useState } from "react";
 import { Menu, X, ChevronDown, Phone, Clock, ArrowRight } from "lucide-react";
-import { LOPOLogo } from "@/components/LOPOLogo";
+import { LOPOLogo } from "@/components/LopoLogo";
 import { SITE, NAV_SERVICES } from "@/lib/site-config";
 
 const NAV_LINKS = [
@@ -190,3 +190,4 @@ export function SiteHeader() {
     </>
   );
 }
+

@@ -1,4 +1,4 @@
-﻿import { LOPOLogo } from "@/components/LOPOLogo";
+﻿import { LOPOLogo } from "@/components/LopoLogo";
 import { SITE } from "@/lib/site-config";
 import { Clock, MapPin } from "lucide-react";
 
@@ -80,3 +80,4 @@ export function SiteFooter() {
     </footer>
   );
 }
+
