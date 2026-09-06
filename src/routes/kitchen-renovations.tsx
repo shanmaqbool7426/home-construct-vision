@@ -1,16 +1,29 @@
 ﻿import { createFileRoute } from "@tanstack/react-router";
+import {
+  Ruler,
+  Wrench,
+  Sparkles,
+  ChefHat,
+  Hammer,
+  Flame,
+  CheckCircle2,
+  Phone,
+  ArrowRight,
+  ShieldCheck,
+  Award,
+} from "lucide-react";
 
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
-import heroExtension from "@/assets/hero-extension.jpg";
-import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
 import loftConversion from "@/assets/loft-conversion.jpg";
+import afterExtension from "@/assets/after-extension.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
+import { SITE } from "@/lib/site-config";
 
-const TITLE = "Kitchen Renovations in London â€” Bespoke Kitchen Design & Installation | ARZ Construction";
+const TITLE = "Kitchen Renovations London  LOPO CONSTRUCTION LIMITED";
 const DESCRIPTION =
-  "Professional kitchen renovation services across London. Custom cabinetry, stone worktops, island kitchens, and integrated appliances. Fixed-price quotes, 10-year guarantee.";
+  "Bespoke kitchen renovations and fitting across London. Custom joinery, marble islands, structural steelwork, plumbing and electrics. Fixed-price quote.";
 
 export const Route = createFileRoute("/kitchen-renovations")({
   head: () => ({
@@ -24,169 +37,101 @@ export const Route = createFileRoute("/kitchen-renovations")({
   component: KitchenRenovations,
 });
 
-const PHONE = "447860135189";
-const PHONE_DISPLAY = "+44 7860 135189";
-const WHATSAPP = "447860135189";
-
 const kitchenStyles = [
   {
-    title: "Modern Handleless Kitchens",
-    description:
-      "Sleek, contemporary designs with push-to-open mechanisms and integrated handles. Perfect for modern homes and open-plan living spaces.",
-    features: [
-      "Push-to-open cabinets",
-      "Integrated appliances",
-      "Minimalist design",
-      "High-gloss or matte finishes",
-    ],
+    title: "Modern Minimalist Kitchens",
+    description: "Handleless units, integrated appliances, and sleek quartz or marble worktops.",
     img: kitchenRenovation,
+    features: ["Handleless cabinetry", "Quartz & marble island", "Integrated smart appliances", "Under-cabinet LED lighting"],
   },
   {
     title: "Traditional Shaker Kitchens",
-    description:
-      "Timeless shaker-style cabinetry with simple, elegant lines. Versatile enough for period properties and contemporary homes alike.",
-    features: [
-      "Classic shaker doors",
-      "Butler sink options",
-      "Timber worktops",
-      "Period-appropriate design",
-    ],
-    img: heroExtension,
+    description: "Timeless timber Shaker doors, Belfast sinks, and range cookers.",
+    img: afterExtension,
+    features: ["Solid wood doors", "Belfast ceramic sink", "Custom pantry unit", "Hand-painted finish"],
   },
   {
-    title: "Open-Plan Kitchen Diners",
-    description:
-      "Create a social heart for your home with an open-plan kitchen that flows into dining and living areas. Perfect for entertaining and family life.",
-    features: [
-      "Island or peninsular units",
-      "Breakfast bars",
-      "Bi-fold doors",
-      "Open-plan layouts",
-    ],
-    img: bathroomRenovation,
-  },
-  {
-    title: "Bespoke Custom Kitchens",
-    description:
-      "Fully bespoke kitchens designed around your specific needs and space. Custom cabinetry made to measure with premium materials and finishes.",
-    features: [
-      "Made-to-measure units",
-      "Custom storage solutions",
-      "Premium materials",
-      "Unique design features",
-    ],
+    title: "Open-Plan Extension Kitchens",
+    description: "Knocking through walls to combine kitchen, dining, and living with Crittall garden doors.",
     img: loftConversion,
+    features: ["Structural steel RSJs", "Crittall / bifold doors", "Continuous floor tiling", "Zoned task lighting"],
   },
 ];
 
 const services = [
   {
-    icon: "ðŸ“",
-    title: "Kitchen Design",
-    description:
-      "Our designers create kitchens that work for your space and lifestyle. From initial concept to detailed 3D visuals, we bring your vision to life.",
+    icon: Ruler,
+    title: "Kitchen Design & 3D Planning",
+    description: "Detailed 3D visual concepts, spatial planning, and material selection for your lifestyle.",
   },
   {
-    icon: "ðŸ”¨",
+    icon: Wrench,
     title: "Full Installation",
-    description:
-      "Complete kitchen fitting service including plumbing, electrics, carpentry, tiling, and decorating. One team handles everything.",
+    description: "Complete fitting service including plumbing, gas, electrics, joinery, and decorating.",
   },
   {
-    icon: "ðŸª¨",
-    title: "Worktop Supply & Fit",
-    description:
-      "Granite, quartz, marble, or solid wood worktops. We supply and install all materials with precision templating and fitting.",
+    icon: Sparkles,
+    title: "Worktop Supply & Fitting",
+    description: "Precision templating and installation of granite, quartz, marble, or solid wood worktops.",
   },
   {
-    icon: "ðŸ’¡",
-    title: "Lighting Design",
-    description:
-      "Strategic lighting design including under-cabinet lights, pendant fittings, and integrated LED systems to enhance your kitchen's ambiance.",
+    icon: ChefHat,
+    title: "Appliance Integration",
+    description: "Professional hookup of hobs, extractors, double ovens, wine coolers, and hot water taps.",
   },
   {
-    icon: "ðŸ”Œ",
-    title: "Appliance Installation",
-    description:
-      "Professional installation of all kitchen appliances including ovens, hobs, extractors, fridges, freezers, and dishwashers.",
+    icon: Hammer,
+    title: "Knock-Through & Structural Work",
+    description: "Removing load-bearing walls with steel beams to create spacious open-plan kitchens.",
   },
   {
-    icon: "ðŸŽ¨",
-    title: "Finishing Touches",
-    description:
-      "From splashback tiling to decorative finishes, we ensure every detail is perfect. Complete decorating and final touches included.",
+    icon: Flame,
+    title: "Gas Safe & Electrical Sign-Off",
+    description: "All plumbing, gas, and electrical work fully certified by accredited engineers.",
   },
 ];
 
 const materials = [
-  {
-    title: "Stone Worktops",
-    description: "Granite, quartz, and marble worktops for durability and luxury.",
-  },
-  {
-    title: "Solid Wood",
-    description: "Oak, walnut, and other hardwoods for a warm, natural aesthetic.",
-  },
-  {
-    title: "Custom Cabinetry",
-    description: "Handcrafted cabinets made to measure in our workshop.",
-  },
-  {
-    title: "Premium Hardware",
-    description: "Blum, Hettich, and other premium hinges and drawer systems.",
-  },
-  {
-    title: "Integrated Appliances",
-    description: "Miele, Siemens, Neff, and other leading appliance brands.",
-  },
-  {
-    title: "Designer Finishes",
-    description: "Handleless, shaker, in-frame, and bespoke door styles.",
-  },
+  { title: "Quartz & Marble", description: "Hard-wearing, stain-resistant worktops in stunning vein patterns." },
+  { title: "Bespoke Joinery", description: "Custom-made timber units tailored to exact room dimensions." },
+  { title: "Porcelain & Ceramic Tiling", description: "Durable floor and splashback tiling with precise grout lines." },
+  { title: "Architectural Lighting", description: "Recessed spotlights, feature pendants, and LED strip lighting." },
 ];
 
 function KitchenRenovations() {
   return (
-    <div className="bg-sand-2 text-ink selection:bg-amber selection:text-white">
+    <div className="min-h-screen bg-white text-[#1E293B] antialiased">
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="relative overflow-hidden bg-[#0F172A] py-16 text-white md:py-24">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="reveal">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-                Kitchen Renovation Specialists
-              </p>
-              <h1 className="font-serif text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl">
-                Bespoke Kitchen Renovations London
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#F59E0B]/30 bg-[#F59E0B]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#F59E0B] mb-4">
+                <ChefHat className="h-3.5 w-3.5" /> Kitchen Specialists
+              </span>
+              <h1 className="font-display text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
+                Bespoke Kitchen Renovations
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-ink/75">
-                From design to installation, we create kitchens that combine beautiful aesthetics
-                with practical functionality. Custom cabinetry, premium worktops, and expert
-                craftsmanship.
+              <p className="mt-4 text-base leading-relaxed text-slate-300">
+                We design and build luxury kitchens across London. From open-plan knock-through extensions to custom Shaker cabinetry and marble worktops.
               </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  Get Free Quote
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a href="/contact" className="btn-primary">
+                  Get Free Quote <ArrowRight className="h-4 w-4" />
                 </a>
-                <a
-                  href={`tel:+44${PHONE.slice(1)}`}
-                  className="inline-flex items-center justify-center rounded-full border border-ink/15 px-8 py-4 text-sm font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-                >
-                  Call {PHONE_DISPLAY}
+                <a href={`tel:${SITE.phone}`} className="btn-secondary">
+                  <Phone className="h-4 w-4 text-[#F59E0B]" /> Call {SITE.phoneDisplay}
                 </a>
               </div>
             </div>
-            <div className="reveal">
-              <div className="luxury-card overflow-hidden rounded-2xl">
+            <div>
+              <div className="build-card overflow-hidden rounded-2xl p-2">
                 <img
                   src={kitchenRenovation}
-                  alt="Bespoke kitchen renovation London ARZ Construction"
-                  className="w-full h-full object-cover aspect-[4/5]"
+                  alt="Bespoke kitchen renovation London LOPO Construction"
+                  className="w-full aspect-[4/3] rounded-xl object-cover"
                 />
               </div>
             </div>
@@ -196,39 +141,36 @@ function KitchenRenovations() {
 
       {/* KITCHEN STYLES */}
       <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F59E0B] mb-2">
               Kitchen Styles
             </p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
+            <h2 className="font-display text-3xl font-extrabold text-[#1E293B] sm:text-4xl">
               Kitchen Design Options
             </h2>
-            <p className="mt-4 text-base text-ink/70">
-              We design and install all types of kitchens across London.
+            <p className="mt-3 text-sm text-slate-600">
+              We design and install all types of kitchens across London and surrounding areas.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {kitchenStyles.map((style) => (
-              <div key={style.title} className="luxury-card overflow-hidden rounded-2xl group">
-                <div className="relative aspect-[16/10] overflow-hidden">
+              <div key={style.title} className="build-card overflow-hidden group">
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                   <img
                     src={style.img}
                     alt={style.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
                 </div>
-                <div className="p-8">
-                  <h3 className="font-serif text-2xl font-bold text-ink">{style.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-ink/75">{style.description}</p>
-                  <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#1E293B]">{style.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">{style.description}</p>
+                  <ul className="mt-4 space-y-2 border-t border-slate-100 pt-4">
                     {style.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2">
-                        <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                          âœ“
-                        </span>
-                        <span className="text-sm font-medium text-ink/80">{feature}</span>
+                      <li key={feature} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-[#F59E0B] shrink-0" />
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -240,99 +182,87 @@ function KitchenRenovations() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="bg-[#F8FAFC] py-20 md:py-28 border-y border-slate-200">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F59E0B] mb-2">
               What We Offer
             </p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
+            <h2 className="font-display text-3xl font-extrabold text-[#1E293B] sm:text-4xl">
               Complete Kitchen Services
             </h2>
-            <p className="mt-4 text-base text-ink/70">
+            <p className="mt-3 text-sm text-slate-600">
               Everything you need for your kitchen renovation under one roof.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <div key={service.title} className="luxury-card rounded-2xl p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber/10 text-3xl">
-                  {service.icon}
+            {services.map((s) => {
+              const Icon = s.icon;
+              return (
+                <div key={s.title} className="build-card p-8">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 text-lg font-bold text-[#1E293B]">{s.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">{s.description}</p>
                 </div>
-                <h3 className="mt-6 font-serif text-xl font-bold text-ink">{service.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/75">{service.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* MATERIALS */}
       <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-              Premium Materials
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F59E0B] mb-2">
+              Premium Quality
             </p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
-              Materials & Finishes
+            <h2 className="font-display text-3xl font-extrabold text-[#1E293B] sm:text-4xl">
+              Materials &amp; Finishes
             </h2>
-            <p className="mt-4 text-base text-ink/70">
-              We use only the finest materials from trusted suppliers.
+            <p className="mt-3 text-sm text-slate-600">
+              We use only the finest materials from trusted UK suppliers.
             </p>
           </div>
-          <div className="mx-auto max-w-4xl">
-            <div className="luxury-card rounded-2xl p-8">
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                {materials.map((material) => (
-                  <div key={material.title} className="flex items-start gap-3">
-                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                      âœ“
-                    </span>
-                    <div>
-                      <h4 className="font-serif font-bold text-ink">{material.title}</h4>
-                      <p className="mt-1 text-sm text-ink/70">{material.description}</p>
-                    </div>
-                  </div>
-                ))}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {materials.map((m) => (
+              <div key={m.title} className="build-card p-6">
+                <div className="flex items-center gap-2 font-bold text-[#0F172A] text-base">
+                  <CheckCircle2 className="h-4 w-4 text-[#F59E0B] shrink-0" />
+                  <span>{m.title}</span>
+                </div>
+                <p className="mt-2 text-xs text-slate-600 leading-relaxed">{m.description}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="luxury-card rounded-2xl p-10 text-center md:p-16">
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-4xl">
-              Ready to Renovate Your Kitchen?
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink/75 max-w-2xl mx-auto">
-              Book a free design consultation with our kitchen specialists. We'll visit your home,
-              discuss your ideas, and provide a fixed-price quote within 48 hours.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Request Free Quote
-              </a>
-              <a
-                href={`tel:+44${PHONE.slice(1)}`}
-                className="inline-flex items-center justify-center rounded-full border border-ink/15 px-8 py-4 text-sm font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-              >
-                Call {PHONE_DISPLAY}
-              </a>
-            </div>
+      {/* CTA */}
+      <section className="bg-[#0F172A] py-20 text-white">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+            Ready to Renovate Your Kitchen?
+          </h2>
+          <p className="mt-4 text-sm text-slate-300 max-w-xl mx-auto">
+            Book a free design consultation. We'll visit your home, discuss your ideas, and provide a fixed-price quote within 48 hours.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="/contact" className="btn-primary">
+              Request Free Quote <ArrowRight className="h-4 w-4" />
+            </a>
+            <a href={`tel:${SITE.phone}`} className="btn-secondary">
+              <Phone className="h-4 w-4 text-[#F59E0B]" /> Call {SITE.phoneDisplay}
+            </a>
           </div>
         </div>
       </section>
 
       <SiteFooter />
-
       <MobileCta />
     </div>
   );
 }
+

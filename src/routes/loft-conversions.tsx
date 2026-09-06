@@ -1,16 +1,27 @@
 ﻿import { createFileRoute } from "@tanstack/react-router";
+import {
+  Home,
+  CheckCircle2,
+  Phone,
+  ArrowRight,
+  ShieldCheck,
+  Award,
+  Layers,
+  Sparkles,
+  Ruler,
+} from "lucide-react";
 
 import loftConversion from "@/assets/loft-conversion.jpg";
-import heroExtension from "@/assets/hero-extension.jpg";
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
-import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
+import afterExtension from "@/assets/after-extension.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
+import { SITE } from "@/lib/site-config";
 
-const TITLE = "Loft Conversions in London â€” Dormer, Velux & Hip-to-Gable | ARZ Construction";
+const TITLE = "Loft Conversions London  LOPO CONSTRUCTION LIMITED";
 const DESCRIPTION =
-  "Professional loft conversion services across London. Dormer, Velux, and hip-to-gable conversions creating master bedrooms, home offices, and guest suites. Fixed-price quotes, 10-year guarantee.";
+  "Dormer, Velux, hip-to-gable, and mansard loft conversions across London. Master bedroom en-suites, skylights, structural steelwork. Fixed-price quote.";
 
 export const Route = createFileRoute("/loft-conversions")({
   head: () => ({
@@ -24,180 +35,94 @@ export const Route = createFileRoute("/loft-conversions")({
   component: LoftConversions,
 });
 
-const PHONE = "447860135189";
-const PHONE_DISPLAY = "+44 7860 135189";
-const WHATSAPP = "447860135189";
-
 const loftTypes = [
   {
-    title: "Dormer Loft Conversions",
-    description:
-      "The most popular choice for London homes. Dormer extensions project from the roof slope to create maximum headroom and floor space. Perfect for master bedrooms with ensuite bathrooms.",
-    features: [
-      "Maximum headroom",
-      "Full-size windows",
-      "Master bedroom suites",
-      "Box dormer or pitched roof",
-    ],
+    title: "Rear Dormer Conversions",
+    description: "Create maximum headroom and usable floor space for master bedroom suites and luxury shower rooms.",
     img: loftConversion,
-  },
-  {
-    title: "Velux Roof Light Conversions",
-    description:
-      "The simplest and most cost-effective option. Velux windows are installed flush with the roof line, maintaining the existing roof structure while flooding the space with natural light.",
-    features: [
-      "Cost-effective solution",
-      "Minimal structural work",
-      "Multiple window options",
-      "Preserves roof line",
-    ],
-    img: heroExtension,
+    features: ["Full headroom expansion", "Master bedroom & en-suite", "Juliet balcony options", "Velux skylights"],
   },
   {
     title: "Hip-to-Gable Conversions",
-    description:
-      "Ideal for properties with hipped roofs. The hip roof is extended vertically to create a gable wall, significantly increasing the usable loft space and head height.",
-    features: [
-      "Increased floor space",
-      "Better head height",
-      "Suitable for hipped roofs",
-      "Structural steelwork",
-    ],
+    description: "Extending the sloping hip roof outwards to create a vertical gable wall for maximum loft space in semi-detached homes.",
+    img: afterExtension,
+    features: ["Ideal for semi-detached homes", "Massive space gain", "Custom staircase layout", "Full insulation"],
+  },
+  {
+    title: "Velux / Rooflight Conversions",
+    description: "Simple, cost-effective loft conversions retaining the original roofline with high-performance Velux windows.",
     img: kitchenRenovation,
-  },
-  {
-    title: "L-Shaped Loft Conversions",
-    description:
-      "Extend across two sections of your property to create substantial additional space. Common in Victorian and Edwardian terraced houses with rear outriggers.",
-    features: [
-      "Maximum space creation",
-      "Two-room potential",
-      "Ideal for terraced homes",
-      "Complex structural work",
-    ],
-    img: bathroomRenovation,
+    features: ["Fast installation", "Cost-effective", "Natural light flood", "Preserved external look"],
   },
 ];
 
-const benefits = [
+const services = [
   {
-    icon: "ðŸ“ˆ",
-    title: "Add 20% to Property Value",
-    description:
-      "A well-designed loft conversion can increase your property's value by up to 20%, making it one of the best home improvement investments.",
+    icon: Home,
+    title: "Structural Steelwork",
+    description: "Engineered steel beams installed to support new loft floor joists and roof structures.",
   },
   {
-    icon: "ðŸ›ï¸",
-    title: "Create Additional Bedrooms",
-    description:
-      "Transform unused loft space into a master bedroom with ensuite, additional bedrooms for growing families, or a self-contained guest suite.",
+    icon: Layers,
+    title: "Staircase Fitting",
+    description: "Bespoke timber staircases designed to match your existing ground and first floor stairs.",
   },
   {
-    icon: "ðŸ ",
-    title: "Home Office or Studio",
-    description:
-      "Create a quiet, separate workspace away from the main living areas. Perfect for remote working or creative pursuits.",
+    icon: Sparkles,
+    title: "En-Suite Plumbing",
+    description: "Saniflo or direct soil pipe connections for luxury master bedroom en-suite bathrooms.",
   },
   {
-    icon: "ðŸ’¡",
-    title: "Maximize Natural Light",
-    description:
-      "Strategic window placement and roof lights flood your new space with natural light, creating a bright and airy environment.",
+    icon: Ruler,
+    title: "Velux & Dormer Windows",
+    description: "High-performance double glazed Velux rooflights and custom dormer windows.",
   },
   {
-    icon: "ðŸ“",
-    title: "Utilize Unused Space",
-    description:
-      "Most London lofts are completely unused. Convert this dead space into valuable living accommodation without extending your footprint.",
+    icon: ShieldCheck,
+    title: "Fire Protection & Insulation",
+    description: "FD30 fire doors, mains smoke alarms, acoustic insulation, and PIR thermal insulation.",
   },
   {
-    icon: "âœ…",
-    title: "No Garden Sacrifice",
-    description:
-      "Unlike ground-floor extensions, loft conversions don't sacrifice any of your valuable outdoor space.",
-  },
-];
-
-const process = [
-  {
-    step: "01",
-    title: "Feasibility Survey",
-    description:
-      "We assess your loft's suitability: roof height, structure, and access. Most lofts can be converted, but some require more structural work than others.",
-  },
-  {
-    step: "02",
-    title: "Design & Planning",
-    description:
-      "Our team creates designs that maximize space and light. We handle planning permissions (if required) and building regulations applications.",
-  },
-  {
-    step: "03",
-    title: "Structural Engineering",
-    description:
-      "Our engineers design the structural steelwork and floor joists needed to support the conversion. All calculations are submitted for approval.",
-  },
-  {
-    step: "04",
-    title: "Construction Phase",
-    description:
-      "Most loft conversions take 8-12 weeks. We handle everything from scaffolding to final decorations with minimal disruption to your home.",
-  },
-  {
-    step: "05",
-    title: "Final Inspection",
-    description:
-      "Building control inspects the conversion to ensure compliance. We handle all sign-offs and provide you with completion certificates.",
-  },
-  {
-    step: "06",
-    title: "Handover & Guarantee",
-    description:
-      "Final snagging, handover, and our 10-year structural guarantee. Your new space is ready to enjoy.",
+    icon: Award,
+    title: "Building Regs Approval",
+    description: "Full coordination with building control for structural, thermal, and fire sign-off.",
   },
 ];
 
 function LoftConversions() {
   return (
-    <div className="bg-sand-2 text-ink selection:bg-amber selection:text-white">
+    <div className="min-h-screen bg-white text-[#1E293B] antialiased">
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="relative overflow-hidden bg-[#0F172A] py-16 text-white md:py-24">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="reveal">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-                Loft Conversion Experts
-              </p>
-              <h1 className="font-serif text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl">
-                Loft Conversions Across London
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#F59E0B]/30 bg-[#F59E0B]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#F59E0B] mb-4">
+                <Home className="h-3.5 w-3.5" /> Loft Specialists
+              </span>
+              <h1 className="font-display text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
+                Bespoke Loft Conversions
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-ink/75">
-                Transform your unused loft space into valuable living accommodation. Dormer, Velux,
-                and hip-to-gable conversions designed to maximize space and light.
+              <p className="mt-4 text-base leading-relaxed text-slate-300">
+                Unlock valuable living space in your attic. We build dormer, Velux, and hip-to-gable loft conversions with master suites across London.
               </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  Get Free Quote
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a href="/contact" className="btn-primary">
+                  Get Free Quote <ArrowRight className="h-4 w-4" />
                 </a>
-                <a
-                  href={`tel:+44${PHONE.slice(1)}`}
-                  className="inline-flex items-center justify-center rounded-full border border-ink/15 px-8 py-4 text-sm font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-                >
-                  Call {PHONE_DISPLAY}
+                <a href={`tel:${SITE.phone}`} className="btn-secondary">
+                  <Phone className="h-4 w-4 text-[#F59E0B]" /> Call {SITE.phoneDisplay}
                 </a>
               </div>
             </div>
-            <div className="reveal">
-              <div className="luxury-card overflow-hidden rounded-2xl">
+            <div>
+              <div className="build-card overflow-hidden rounded-2xl p-2">
                 <img
                   src={loftConversion}
-                  alt="Professional loft conversion London ARZ Construction"
-                  className="w-full h-full object-cover aspect-[4/5]"
+                  alt="Loft conversion London LOPO Construction"
+                  className="w-full aspect-[4/3] rounded-xl object-cover"
                 />
               </div>
             </div>
@@ -205,41 +130,38 @@ function LoftConversions() {
         </div>
       </section>
 
-      {/* LOFT TYPES */}
+      {/* TYPES */}
       <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-              Types of Loft Conversions
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F59E0B] mb-2">
+              Loft Options
             </p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
-              Loft Conversion Options
+            <h2 className="font-display text-3xl font-extrabold text-[#1E293B] sm:text-4xl">
+              Loft Conversion Designs
             </h2>
-            <p className="mt-4 text-base text-ink/70">
-              We design and build all types of loft conversions across London.
+            <p className="mt-3 text-sm text-slate-600">
+              Custom designs tailored to your property type and space requirements.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {loftTypes.map((type) => (
-              <div key={type.title} className="luxury-card overflow-hidden rounded-2xl group">
-                <div className="relative aspect-[16/10] overflow-hidden">
+              <div key={type.title} className="build-card overflow-hidden group">
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                   <img
                     src={type.img}
                     alt={type.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
                 </div>
-                <div className="p-8">
-                  <h3 className="font-serif text-2xl font-bold text-ink">{type.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-ink/75">{type.description}</p>
-                  <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#1E293B]">{type.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">{type.description}</p>
+                  <ul className="mt-4 space-y-2 border-t border-slate-100 pt-4">
                     {type.features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2">
-                        <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                          âœ“
-                        </span>
-                        <span className="text-sm font-medium text-ink/80">{feature}</span>
+                      <li key={feature} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-[#F59E0B] shrink-0" />
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -250,94 +172,60 @@ function LoftConversions() {
         </div>
       </section>
 
-      {/* BENEFITS */}
-      <section className="bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+      {/* SERVICES */}
+      <section className="bg-[#F8FAFC] py-20 md:py-28 border-y border-slate-200">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-              Why Convert Your Loft?
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F59E0B] mb-2">
+              What We Offer
             </p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
-              Benefits of Loft Conversions
+            <h2 className="font-display text-3xl font-extrabold text-[#1E293B] sm:text-4xl">
+              Complete Loft Services
             </h2>
-            <p className="mt-4 text-base text-ink/70">
-              A loft conversion is one of the best home improvement investments you can make.
+            <p className="mt-3 text-sm text-slate-600">
+              Everything required to transform your attic into luxury living space.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {benefits.map((benefit) => (
-              <div key={benefit.title} className="luxury-card rounded-2xl p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber/10 text-3xl">
-                  {benefit.icon}
+            {services.map((s) => {
+              const Icon = s.icon;
+              return (
+                <div key={s.title} className="build-card p-8">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 text-lg font-bold text-[#1E293B]">{s.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">{s.description}</p>
                 </div>
-                <h3 className="mt-6 font-serif text-xl font-bold text-ink">{benefit.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/75">{benefit.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* PROCESS */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-              How We Work
-            </p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
-              Our Loft Conversion Process
-            </h2>
-            <p className="mt-4 text-base text-ink/70">
-              A structured, transparent approach from feasibility to final handover.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {process.map((step) => (
-              <div key={step.step} className="luxury-card rounded-2xl p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-amber/10 font-serif text-2xl font-bold text-amber">
-                  {step.step}
-                </div>
-                <h3 className="mt-6 font-serif text-xl font-bold text-ink">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/75">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section className="bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="luxury-card rounded-2xl p-10 text-center md:p-16">
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-4xl">
-              Ready to Convert Your Loft?
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink/75 max-w-2xl mx-auto">
-              Book a free feasibility survey with our loft conversion specialists. We'll assess your
-              loft's potential and provide a fixed-price quote within 48 hours.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Request Free Quote
-              </a>
-              <a
-                href={`tel:+44${PHONE.slice(1)}`}
-                className="inline-flex items-center justify-center rounded-full border border-ink/15 px-8 py-4 text-sm font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-              >
-                Call {PHONE_DISPLAY}
-              </a>
-            </div>
+      {/* CTA */}
+      <section className="bg-[#0F172A] py-20 text-white">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+            Ready to Convert Your Loft?
+          </h2>
+          <p className="mt-4 text-sm text-slate-300 max-w-xl mx-auto">
+            Contact LOPO Construction today for a free site survey and fixed-price quote.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="/contact" className="btn-primary">
+              Request Free Quote <ArrowRight className="h-4 w-4" />
+            </a>
+            <a href={`tel:${SITE.phone}`} className="btn-secondary">
+              <Phone className="h-4 w-4 text-[#F59E0B]" /> Call {SITE.phoneDisplay}
+            </a>
           </div>
         </div>
       </section>
 
       <SiteFooter />
-
       <MobileCta />
     </div>
   );
 }
+

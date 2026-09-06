@@ -4,8 +4,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Privacy & Cookie Policy â€” ARZ Construction Ltd";
-const DESCRIPTION = "Privacy and cookie policy for ARZ Construction Ltd website.";
+const TITLE = "Privacy & Cookie Policy  LOPO Construction Ltd";
+const DESCRIPTION = "Privacy and cookie policy for LOPO Construction Ltd website.";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -36,7 +36,7 @@ function Privacy() {
             <div>
               <h2 className="font-serif text-2xl font-bold text-ink mb-4">Introduction</h2>
               <p className="leading-relaxed">
-                ARZ Construction Ltd ("we", "us", "our") is committed to protecting your privacy. This policy explains how we collect, use, and protect your personal information when you use our website or services.
+                LOPO Construction Ltd ("we", "us", "our") is committed to protecting your privacy. This policy explains how we collect, use, and protect your personal information when you use our website or services.
               </p>
             </div>
 
@@ -94,7 +94,7 @@ function Privacy() {
                 If you have any questions about this privacy policy or our data practices, please contact us at:
               </p>
               <address className="mt-3 not-italic text-sm">
-                ARZ Construction Ltd<br />
+                LOPO Construction Ltd<br />
                 4th Floor, Silverstream House<br />
                 45 Fitzroy Street, Fitzrovia<br />
                 London<br />
@@ -109,3 +109,4 @@ function Privacy() {
     </div>
   );
 }
+

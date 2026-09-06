@@ -1,68 +1,81 @@
-import { ArzLogo } from "@/components/ArzLogo";
+﻿import { LOPOLogo } from "@/components/LOPOLogo";
 import { SITE } from "@/lib/site-config";
+import { Clock, MapPin } from "lucide-react";
 
 const EXPLORE_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Our Services", href: "/services" },
   { label: "Projects", href: "/projects" },
-  { label: "Reviews", href: "/reviews" },
+  { label: "Areas We Cover", href: "/areas" },
 ];
 
 const COMPANY_LINKS = [
-  { label: "Areas We Cover", href: "/areas" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact & Quotes", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms", href: "/terms" },
+  { label: "Terms & Conditions", href: "/terms" },
 ];
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-ink/10 bg-sand-2 py-14">
-      <div className="mx-auto max-w-6xl px-5">
-        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div>
-            <ArzLogo size="lg" theme="light" />
-            <div className="mt-4 max-w-sm space-y-2 text-sm leading-relaxed text-ink/65">
-              <p className="font-semibold text-ink/80">Head Office</p>
-              <p>
-                {SITE.addressLines.map((line) => (
-                  <span key={line}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
+    <footer className="border-t border-slate-800 bg-[#0F172A] text-white py-16">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+          <div className="max-w-sm">
+            <LOPOLogo size="lg" theme="dark" />
+            <div className="mt-5 space-y-3 text-xs leading-relaxed text-slate-300">
+              <p className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-[#F59E0B] shrink-0 mt-0.5" />
+                <span>
+                  {SITE.addressLines.map((line) => (
+                    <span key={line}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
+                </span>
               </p>
-              <p className="mt-3">
-                Registered in England &amp; Wales
-                <br />
-                Company No. {SITE.companyNumber}
-              </p>
+
+              {/* Office Hours */}
+              <div className="mt-4 rounded-xl border border-slate-800 bg-slate-900/60 p-3.5 space-y-1">
+                <p className="font-bold text-white flex items-center gap-1.5 uppercase tracking-wider text-[11px]">
+                  <Clock className="h-3.5 w-3.5 text-[#F59E0B]" />
+                  Office Hours
+                </p>
+                <p className="text-slate-300 text-xs">{SITE.workingHours}</p>
+                <p className="text-slate-400 text-xs">{SITE.sundayHours}</p>
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-x-10 gap-y-2.5 text-sm font-medium text-ink/75">
-            <div className="flex flex-col gap-2.5">
-              <p className="text-xs font-bold uppercase tracking-wider text-ink/50">Explore</p>
+
+          <div className="grid grid-cols-2 gap-x-12 gap-y-4 text-sm font-medium">
+            <div className="flex flex-col gap-3">
+              <p className="text-xs font-black uppercase tracking-widest text-[#F59E0B]">Explore</p>
               {EXPLORE_LINKS.map((l) => (
-                <a key={l.href} className="hover:text-amber transition-colors" href={l.href}>
+                <a key={l.href} className="text-slate-300 hover:text-[#F59E0B] transition-colors" href={l.href}>
                   {l.label}
                 </a>
               ))}
             </div>
-            <div className="flex flex-col gap-2.5">
-              <p className="text-xs font-bold uppercase tracking-wider text-ink/50">Company</p>
+            <div className="flex flex-col gap-3">
+              <p className="text-xs font-black uppercase tracking-widest text-[#F59E0B]">Company</p>
               {COMPANY_LINKS.map((l) => (
-                <a key={l.href} className="hover:text-amber transition-colors" href={l.href}>
+                <a key={l.href} className="text-slate-300 hover:text-[#F59E0B] transition-colors" href={l.href}>
                   {l.label}
                 </a>
               ))}
             </div>
           </div>
         </div>
-        <p className="mt-10 border-t border-ink/10 pt-6 text-xs text-ink/50">
-          © {new Date().getFullYear()} {SITE.companyName}. All rights reserved. Built with
-          architectural precision.
-        </p>
+
+        <div className="mt-12 border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+          <p>
+            © {new Date().getFullYear()} {SITE.companyName}. All rights reserved.
+          </p>
+          <p className="text-slate-400">
+            Built with <span className="text-[#F59E0B]">architectural precision</span>.
+          </p>
+        </div>
       </div>
     </footer>
   );

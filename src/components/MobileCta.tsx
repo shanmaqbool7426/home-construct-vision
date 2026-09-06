@@ -1,4 +1,4 @@
-import { Phone, MessageCircle } from "lucide-react";
+﻿import { Phone, MessageCircle } from "lucide-react";
 import { SITE } from "@/lib/site-config";
 
 export function MobileCta() {

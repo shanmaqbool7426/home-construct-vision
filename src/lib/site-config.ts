@@ -1,14 +1,17 @@
-export const SITE = {
-  companyName: "ARZ CONSTRUCTION LTD",
-  companyNumber: "12858978",
-  phone: "447860135189",
-  phoneDisplay: "+44 7860 135189",
-  whatsapp: "447860135189",
-  email: "Arzconstruction23@gmail.com",
+﻿export const SITE = {
+  companyName: "LOPO CONSTRUCTION LIMITED",
+  companyNumber: "12616349",
+  phone: "447354045309",
+  phoneDisplay: "+44 7354 045309",
+  whatsapp: "447354045309",
+  email: "Lopoconstruction@gmail.com",
+  workingHours: "Monday – Saturday: 8:00 AM – 6:00 PM",
+  workingHoursShort: "Mon – Sat: 8:00 AM – 6:00 PM",
+  sundayHours: "Sunday: Closed",
   addressLines: [
-    "4th Floor, Silverstream House",
-    "45 Fitzroy Street",
-    "Fitzrovia, London",
+    "14 Morden Court Parade",
+    "Morden",
+    "United Kingdom, SM4 5HJ",
   ],
 };
 

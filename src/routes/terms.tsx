@@ -4,8 +4,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "Terms & Conditions â€” ARZ Construction Ltd";
-const DESCRIPTION = "Terms and conditions for ARZ Construction Ltd services.";
+const TITLE = "Terms & Conditions  LOPO Construction Ltd";
+const DESCRIPTION = "Terms and conditions for LOPO Construction Ltd services.";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
@@ -36,14 +36,14 @@ function Terms() {
             <div>
               <h2 className="font-serif text-2xl font-bold text-ink mb-4">1. Introduction</h2>
               <p className="leading-relaxed">
-                These terms and conditions govern your use of ARZ Construction Ltd's services. By engaging our services, you agree to these terms.
+                These terms and conditions govern your use of LOPO Construction Ltd's services. By engaging our services, you agree to these terms.
               </p>
             </div>
 
             <div>
               <h2 className="font-serif text-2xl font-bold text-ink mb-4">2. Our Services</h2>
               <p className="leading-relaxed">
-                ARZ Construction Ltd provides construction, renovation, and related services including but not limited to extensions, loft conversions, kitchen and bathroom renovations, plumbing, and electrical work.
+                LOPO Construction Ltd provides construction, renovation, and related services including but not limited to extensions, loft conversions, kitchen and bathroom renovations, plumbing, and electrical work.
               </p>
             </div>
 
@@ -69,7 +69,7 @@ function Terms() {
             <div>
               <h2 className="font-serif text-2xl font-bold text-ink mb-4">5. Insurance</h2>
               <p className="leading-relaxed">
-                ARZ Construction Ltd maintains comprehensive public liability insurance and builder's risk coverage. Certificates are available upon request.
+                LOPO Construction Ltd maintains comprehensive public liability insurance and builder's risk coverage. Certificates are available upon request.
               </p>
             </div>
 
@@ -105,7 +105,7 @@ function Terms() {
                 For questions about these terms, please contact us at:
               </p>
               <address className="mt-3 not-italic text-sm">
-                ARZ Construction Ltd<br />
+                LOPO Construction Ltd<br />
                 4th Floor, Silverstream House<br />
                 45 Fitzroy Street, Fitzrovia<br />
                 London<br />
@@ -120,3 +120,4 @@ function Terms() {
     </div>
   );
 }
+

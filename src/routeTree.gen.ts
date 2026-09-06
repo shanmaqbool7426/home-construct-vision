@@ -24,7 +24,6 @@ import { Route as OtherServicesRouteImport } from './routes/other-services'
 import { Route as PlumbingRouteImport } from './routes/plumbing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TermsRouteImport } from './routes/terms'
 
@@ -103,11 +102,6 @@ const ProjectsRoute = ProjectsRouteImport.update({
   path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ReviewsRoute = ReviewsRouteImport.update({
-  id: '/reviews',
-  path: '/reviews',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -135,7 +129,6 @@ export interface FileRoutesByFullPath {
   '/plumbing': typeof PlumbingRoute
   '/privacy': typeof PrivacyRoute
   '/projects': typeof ProjectsRoute
-  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
 }
@@ -155,7 +148,6 @@ export interface FileRoutesByTo {
   '/plumbing': typeof PlumbingRoute
   '/privacy': typeof PrivacyRoute
   '/projects': typeof ProjectsRoute
-  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
 }
@@ -176,7 +168,6 @@ export interface FileRoutesById {
   '/plumbing': typeof PlumbingRoute
   '/privacy': typeof PrivacyRoute
   '/projects': typeof ProjectsRoute
-  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
   '/terms': typeof TermsRoute
 }
@@ -198,7 +189,6 @@ export interface FileRouteTypes {
     | '/plumbing'
     | '/privacy'
     | '/projects'
-    | '/reviews'
     | '/services'
     | '/terms'
   fileRoutesByTo: FileRoutesByTo
@@ -218,7 +208,6 @@ export interface FileRouteTypes {
     | '/plumbing'
     | '/privacy'
     | '/projects'
-    | '/reviews'
     | '/services'
     | '/terms'
   id:
@@ -238,7 +227,6 @@ export interface FileRouteTypes {
     | '/plumbing'
     | '/privacy'
     | '/projects'
-    | '/reviews'
     | '/services'
     | '/terms'
   fileRoutesById: FileRoutesById
@@ -259,7 +247,6 @@ export interface RootRouteChildren {
   PlumbingRoute: typeof PlumbingRoute
   PrivacyRoute: typeof PrivacyRoute
   ProjectsRoute: typeof ProjectsRoute
-  ReviewsRoute: typeof ReviewsRoute
   ServicesRoute: typeof ServicesRoute
   TermsRoute: typeof TermsRoute
 }
@@ -371,13 +358,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/reviews': {
-      id: '/reviews'
-      path: '/reviews'
-      fullPath: '/reviews'
-      preLoaderRoute: typeof ReviewsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -411,7 +391,6 @@ const rootRouteChildren: RootRouteChildren = {
   PlumbingRoute: PlumbingRoute,
   PrivacyRoute: PrivacyRoute,
   ProjectsRoute: ProjectsRoute,
-  ReviewsRoute: ReviewsRoute,
   ServicesRoute: ServicesRoute,
   TermsRoute: TermsRoute,
 }

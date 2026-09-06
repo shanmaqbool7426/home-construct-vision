@@ -1,15 +1,25 @@
 ﻿import { createFileRoute } from "@tanstack/react-router";
+import {
+  Wrench,
+  Droplets,
+  Flame,
+  CheckCircle2,
+  Phone,
+  ArrowRight,
+  ShieldCheck,
+  Award,
+} from "lucide-react";
 
 import bathroomRenovation from "@/assets/bathroom-renovation.jpg";
-import heroExtension from "@/assets/hero-extension.jpg";
 import kitchenRenovation from "@/assets/kitchen-renovation.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
+import { SITE } from "@/lib/site-config";
 
-const TITLE = "Plumbing Services in London â€” Gas Safe Registered Plumbers | ARZ Construction";
+const TITLE = "Plumbing Services London  LOPO CONSTRUCTION LIMITED";
 const DESCRIPTION =
-  "Professional plumbing services across London. Gas Safe registered plumbers for boiler installations, bathroom plumbing, emergency repairs, and central heating systems. 24/7 emergency call-outs.";
+  "Gas Safe registered plumbing, heating, boiler installation, and unvented hot water systems across London. Emergency plumbing and full house re-plumbing.";
 
 export const Route = createFileRoute("/plumbing")({
   head: () => ({
@@ -23,159 +33,73 @@ export const Route = createFileRoute("/plumbing")({
   component: Plumbing,
 });
 
-const PHONE = "447860135189";
-const PHONE_DISPLAY = "+44 7860 135189";
-
-const services = [
+const plumbingServices = [
   {
-    icon: "ðŸ”§",
-    title: "Emergency Plumbing Repairs",
-    description:
-      "24/7 emergency call-outs for burst pipes, leaks, blockages, and boiler breakdowns. Fast response across London.",
-    features: [
-      "Burst pipes",
-      "Leak detection",
-      "Blocked drains",
-      "Boiler breakdowns",
-    ],
+    icon: Flame,
+    title: "Boiler Installation & Heating",
+    description: "Gas Safe registered installation of high-efficiency combi boilers, system boilers, and smart thermostats.",
   },
   {
-    icon: "ðŸ”¥",
-    title: "Boiler Installations",
-    description:
-      "Gas Safe registered engineers for boiler installations, replacements, and repairs. All major brands supplied and fitted.",
-    features: [
-      "New boiler installations",
-      "Boiler replacements",
-      "Annual servicing",
-      "Power flushing",
-    ],
+    icon: Droplets,
+    title: "Unvented Hot Water Cylinders",
+    description: "High-pressure hot water systems supplying multiple bathrooms simultaneously with powerful water flow.",
   },
   {
-    icon: "ðŸš¿",
-    title: "Bathroom Plumbing",
-    description:
-      "Complete bathroom plumbing services for renovations and new installations. From sanitaryware to pipework and drainage.",
-    features: [
-      "Sanitaryware fitting",
-      "Pipework installation",
-      "Drainage systems",
-      "Shower installations",
-    ],
+    icon: Wrench,
+    title: "Complete Re-Plumbing",
+    description: "Full property re-piping in copper or multi-layer barrier pipework for house extensions and refurbishments.",
   },
   {
-    icon: "ðŸ ",
-    title: "Central Heating Systems",
-    description:
-      "Installation and maintenance of central heating systems. Radiators, underfloor heating, and controls.",
-    features: [
-      "Radiator installation",
-      "Underfloor heating",
-      "Thermostat controls",
-      "System upgrades",
-    ],
+    icon: ShieldCheck,
+    title: "Underfloor Heating Plumbing",
+    description: "Warm-water underfloor heating manifolds, pipe loops, and zone controls for ground floors and extensions.",
   },
   {
-    icon: "ðŸ³",
-    title: "Kitchen Plumbing",
-    description:
-      "Kitchen plumbing for sinks, dishwashers, washing machines, and water filtration systems. Professional installation guaranteed.",
-    features: [
-      "Sink installation",
-      "Dishwasher fitting",
-      "Washing machine connections",
-      "Water filtration",
-    ],
+    icon: Award,
+    title: "Gas Safe Certification",
+    description: "Landlord gas safety certificates, boiler servicing, and gas pipework inspections fully accredited.",
   },
   {
-    icon: "ðŸ”",
-    title: "Leak Detection & Repair",
-    description:
-      "Advanced leak detection services to find and fix leaks without unnecessary damage to your property.",
-    features: [
-      "Electronic leak detection",
-      "Pipe repairs",
-      "Joint replacements",
-      "Preventative maintenance",
-    ],
-  },
-];
-
-const whyChooseUs = [
-  {
-    icon: "âœ…",
-    title: "Gas Safe Registered",
-    description: "All our gas engineers are Gas Safe registered for your safety and peace of mind.",
-  },
-  {
-    icon: "â°",
-    title: "24/7 Emergency Service",
-    description: "Available round the clock for plumbing emergencies. Fast response times across London.",
-  },
-  {
-    icon: "ðŸ’°",
-    title: "Fixed-Price Quotes",
-    description: "No hidden costs or surprise charges. We provide clear, fixed-price quotes before work begins.",
-  },
-  {
-    icon: "ðŸ›¡ï¸",
-    title: "Fully Insured",
-    description: "Comprehensive public liability insurance for complete protection.",
-  },
-  {
-    icon: "ðŸ†",
-    title: "Experienced Engineers",
-    description: "Our plumbers have extensive experience across all types of plumbing work.",
-  },
-  {
-    icon: "ðŸ“‹",
-    title: "Guaranteed Work",
-    description: "All work comes with our guarantee for quality assurance.",
+    icon: CheckCircle2,
+    title: "Drainage & Soil Pipes",
+    description: "New underground drainage connections, stack replacement, and waste pipe routing for new bathrooms.",
   },
 ];
 
 function Plumbing() {
   return (
-    <div className="bg-sand-2 text-ink selection:bg-amber selection:text-white">
+    <div className="min-h-screen bg-white text-[#1E293B] antialiased">
       <SiteHeader />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="relative overflow-hidden bg-[#0F172A] py-16 text-white md:py-24">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="reveal">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-                Gas Safe Registered Plumbers
-              </p>
-              <h1 className="font-serif text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl">
-                Professional Plumbing Services London
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#F59E0B]/30 bg-[#F59E0B]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#F59E0B] mb-4">
+                <Flame className="h-3.5 w-3.5" /> Gas Safe Registered
+              </span>
+              <h1 className="font-display text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
+                Plumbing &amp; Heating Services
               </h1>
-              <p className="mt-6 text-lg leading-relaxed text-ink/75">
-                From emergency repairs to complete bathroom installations, our Gas Safe registered
-                plumbers provide comprehensive plumbing services across London. Available 24/7 for
-                emergencies.
+              <p className="mt-4 text-base leading-relaxed text-slate-300">
+                Professional plumbing and gas heating solutions across London. From boiler replacements to full house re-plumbing and underfloor heating manifolds.
               </p>
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  Get Free Quote
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a href="/contact" className="btn-primary">
+                  Get Free Quote <ArrowRight className="h-4 w-4" />
                 </a>
-                <a
-                  href={`tel:+44${PHONE.slice(1)}`}
-                  className="inline-flex items-center justify-center rounded-full border border-ink/15 px-8 py-4 text-sm font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-                >
-                  Emergency: {PHONE_DISPLAY}
+                <a href={`tel:${SITE.phone}`} className="btn-secondary">
+                  <Phone className="h-4 w-4 text-[#F59E0B]" /> Call {SITE.phoneDisplay}
                 </a>
               </div>
             </div>
-            <div className="reveal">
-              <div className="luxury-card overflow-hidden rounded-2xl">
+            <div>
+              <div className="build-card overflow-hidden rounded-2xl p-2">
                 <img
                   src={bathroomRenovation}
-                  alt="Professional plumbing services London ARZ Construction"
-                  className="w-full h-full object-cover aspect-[4/5]"
+                  alt="Plumbing services London LOPO Construction"
+                  className="w-full aspect-[4/3] rounded-xl object-cover"
                 />
               </div>
             </div>
@@ -184,135 +108,59 @@ function Plumbing() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
+      <section className="bg-[#F8FAFC] py-20 md:py-28 border-b border-slate-200">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-              Our Plumbing Services
+            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F59E0B] mb-2">
+              Plumbing Solutions
             </p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
-              Complete Plumbing Solutions
+            <h2 className="font-display text-3xl font-extrabold text-[#1E293B] sm:text-4xl">
+              Gas Safe &amp; Plumbing Services
             </h2>
-            <p className="mt-4 text-base text-ink/70">
-              Professional plumbing services for residential and commercial properties across London.
+            <p className="mt-3 text-sm text-slate-600">
+              Expert plumbing services for residential refurbishments, extensions, and emergency upgrades.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <div key={service.title} className="luxury-card rounded-2xl p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber/10 text-3xl">
-                  {service.icon}
+            {plumbingServices.map((s) => {
+              const Icon = s.icon;
+              return (
+                <div key={s.title} className="build-card p-8">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F59E0B]/10 text-[#F59E0B] border border-[#F59E0B]/20">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 text-lg font-bold text-[#1E293B]">{s.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-slate-600">{s.description}</p>
                 </div>
-                <h3 className="mt-6 font-serif text-xl font-bold text-ink">{service.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/75">{service.description}</p>
-                <ul className="mt-6 space-y-2">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber text-xs">
-                        âœ“
-                      </span>
-                      <span className="text-sm font-medium text-ink/80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
-      <section className="bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="mb-14 text-center max-w-2xl mx-auto">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-              Why Choose ARZ
-            </p>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
-              Why Choose Our Plumbers?
-            </h2>
-            <p className="mt-4 text-base text-ink/70">
-              Trusted, qualified, and experienced plumbing professionals.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {whyChooseUs.map((item) => (
-              <div key={item.title} className="luxury-card rounded-2xl p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber/10 text-3xl">
-                  {item.icon}
-                </div>
-                <h3 className="mt-6 font-serif text-xl font-bold text-ink">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/75">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* EMERGENCY CTA */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="luxury-card rounded-2xl p-10 text-center md:p-16 border-amber/30">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-amber/10 text-5xl mb-6">
-              ðŸš¨
-            </div>
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-4xl">
-              Plumbing Emergency?
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink/75 max-w-2xl mx-auto">
-              Don't panic. Our emergency plumbers are available 24/7 across London. Fast response
-              times for burst pipes, leaks, and boiler breakdowns.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-              <a
-                href={`tel:+44${PHONE.slice(1)}`}
-                className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Call Emergency: {PHONE_DISPLAY}
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-ink/15 px-8 py-4 text-sm font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-              >
-                Request Callback
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA SECTION */}
-      <section className="bg-sand-2 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="luxury-card rounded-2xl p-10 text-center md:p-16">
-            <h2 className="font-serif text-3xl font-bold text-ink md:text-4xl">
-              Need a Plumber in London?
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-ink/75 max-w-2xl mx-auto">
-              Book a free consultation with our plumbing team. We'll assess your needs and provide a
-              fixed-price quote with no obligation.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-amber px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-amber/25 transition-all hover:bg-copper hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Request Free Quote
-              </a>
-              <a
-                href={`tel:+44${PHONE.slice(1)}`}
-                className="inline-flex items-center justify-center rounded-full border border-ink/15 px-8 py-4 text-sm font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-              >
-                Call {PHONE_DISPLAY}
-              </a>
-            </div>
+      {/* CTA */}
+      <section className="bg-[#0F172A] py-20 text-white">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <h2 className="font-display text-3xl font-extrabold text-white sm:text-4xl">
+            Need Gas Safe Plumbing?
+          </h2>
+          <p className="mt-4 text-sm text-slate-300 max-w-xl mx-auto">
+            Contact LOPO Construction today for a free site visit and fixed-price quote.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="/contact" className="btn-primary">
+              Request Free Quote <ArrowRight className="h-4 w-4" />
+            </a>
+            <a href={`tel:${SITE.phone}`} className="btn-secondary">
+              <Phone className="h-4 w-4 text-[#F59E0B]" /> Call {SITE.phoneDisplay}
+            </a>
           </div>
         </div>
       </section>
 
       <SiteFooter />
-
       <MobileCta />
     </div>
   );
 }
+

@@ -8,9 +8,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { MobileCta } from "@/components/MobileCta";
 
-const TITLE = "About Us â€” ARZ Construction Ltd | London's Trusted Design & Build Specialists";
+const TITLE = "About Us  LOPO Construction Ltd | London's Trusted Design & Build Specialists";
 const DESCRIPTION =
-  "Established in 2011, ARZ Construction Ltd is a London-based design and build company specializing in extensions, loft conversions, and luxury home renovations. Fully insured, 10-year guarantee.";
+  "Established in 2011, LOPO Construction Ltd is a London-based design and build company specializing in extensions, loft conversions, and luxury home renovations. Fully insured, 10-year guarantee.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -24,9 +24,9 @@ export const Route = createFileRoute("/about")({
   component: About,
 });
 
-const PHONE = "447860135189";
+const PHONE = "447354045309";
 const PHONE_DISPLAY = "+44 7860 135189";
-const WHATSAPP = "447860135189";
+const WHATSAPP = "447354045309";
 
 const companyStats = [
   { number: "15+", label: "Years Experience" },
@@ -37,25 +37,25 @@ const companyStats = [
 
 const values = [
   {
-    icon: "ðŸ›ï¸",
+    icon: "",
     title: "Architectural Excellence",
     description:
       "Every project begins with meticulous design. We combine traditional craftsmanship with contemporary innovation to create spaces that stand the test of time.",
   },
   {
-    icon: "ðŸ¤",
+    icon: "",
     title: "Transparent Partnership",
     description:
       "Fixed-price quotes, weekly progress reports, and a dedicated project manager ensure you're informed and in control throughout your build journey.",
   },
   {
-    icon: "ðŸ›¡ï¸",
+    icon: "",
     title: "Uncompromising Quality",
     description:
       "From structural steelwork to final finishes, we use only premium materials and accredited tradespeople. Every detail is inspected to meet our exacting standards.",
   },
   {
-    icon: "â±ï¸",
+    icon: "",
     title: "On-Time Delivery",
     description:
       "Our track record speaks for itself. 95% of projects complete on schedule, with detailed timelines and proactive project management from day one.",
@@ -108,7 +108,7 @@ function About() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="reveal max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-              About ARZ Construction
+              About LOPO Construction
             </p>
             <h1 className="font-serif text-4xl font-bold leading-tight text-ink sm:text-5xl lg:text-6xl">
               Building London's Finest Homes Since 2011
@@ -147,18 +147,18 @@ function About() {
                 Our Story
               </p>
               <h2 className="font-serif text-3xl font-bold text-ink md:text-4xl">
-                From Vision to Reality: The ARZ Journey
+                From Vision to Reality: The LOPO Journey
               </h2>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-ink/75">
                 <p>
-                  Founded in 2011, ARZ Construction Ltd began with a simple mission: to transform
+                  Founded in 2011, LOPO Construction Ltd began with a simple mission: to transform
                   the way London homeowners approach building projects. Tired of the industry's
                   reputation for delays, hidden costs, and poor communication, we set out to create
                   a different kind of construction company.
                 </p>
                 <p>
                   Over the past 15 years, we've completed more than 500 projects across London and
-                  the Home Counties â€” from modest bathroom refurbishments to ambitious whole-house
+                  the Home Counties  from modest bathroom refurbishments to ambitious whole-house
                   renovations and architectural extensions. Each project has strengthened our
                   commitment to quality, transparency, and client care.
                 </p>
@@ -173,7 +173,7 @@ function About() {
               <div className="luxury-card overflow-hidden rounded-2xl">
                 <img
                   src={heroExtension}
-                  alt="Modern house extension designed and built by ARZ Construction"
+                  alt="Modern house extension designed and built by LOPO Construction"
                   className="w-full h-full object-cover aspect-[4/5]"
                 />
               </div>
@@ -237,7 +237,7 @@ function About() {
         <div className="mx-auto max-w-6xl px-5">
           <div className="mb-14 text-center max-w-2xl mx-auto">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber mb-3">
-              The People Behind ARZ
+              The People Behind LOPO
             </p>
             <h2 className="font-serif text-3xl font-bold text-ink md:text-5xl">
               Meet Your Project Team
@@ -288,7 +288,7 @@ function About() {
                 {certifications.map((cert) => (
                   <li key={cert} className="flex items-center gap-3">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber/15 text-amber">
-                      âœ“
+                      
                     </span>
                     <span className="text-sm font-semibold text-ink/85">{cert}</span>
                   </li>
@@ -334,3 +334,4 @@ function About() {
     </div>
   );
 }
+

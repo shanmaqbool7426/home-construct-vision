@@ -1,13 +1,12 @@
-import { useState } from "react";
-import { Menu, X, ChevronDown, Phone, MessageCircle } from "lucide-react";
-import { ArzLogo } from "@/components/ArzLogo";
+﻿import { useState } from "react";
+import { Menu, X, ChevronDown, Phone, Clock, ArrowRight } from "lucide-react";
+import { LOPOLogo } from "@/components/LOPOLogo";
 import { SITE, NAV_SERVICES } from "@/lib/site-config";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
-  { label: "Reviews", href: "/reviews" },
   { label: "Areas", href: "/areas" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
@@ -19,22 +18,32 @@ export function SiteHeader() {
 
   return (
     <>
-      {/* TOP ANNOUNCEMENT BAR */}
-      <div className="bg-ink text-sand-2 text-xs py-2 px-4 text-center tracking-wider uppercase font-medium flex items-center justify-center gap-2 border-b border-amber/20">
-        <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber animate-pulse" />
-        <span>London Design &amp; Build Specialists · Fixed-Price Guaranteed Quotes</span>
+      {/* TOP ANNOUNCEMENT & HOURS BAR */}
+      <div className="bg-[#020617] text-slate-300 text-xs py-2 px-6 text-center font-semibold flex flex-wrap items-center justify-between gap-2 border-b border-[#F59E0B]/20">
+        <div className="flex items-center gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-[#F59E0B] animate-pulse" />
+          <span className="uppercase tracking-wider">London Design &amp; Build Specialists</span>
+        </div>
+        <div className="hidden sm:flex items-center gap-4 text-[11px] text-slate-300">
+          <span className="flex items-center gap-1.5">
+            <Clock className="h-3.5 w-3.5 text-[#F59E0B]" />
+            {SITE.workingHoursShort}
+          </span>
+          <span className="text-slate-600">|</span>
+          <span className="text-[#F59E0B] font-bold">Fixed-Price Guaranteed Quotes</span>
+        </div>
       </div>
 
       {/* HEADER */}
-      <header className="sticky top-0 z-50 border-b border-ink/10 bg-sand-2/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="/" aria-label="ARZ Construction home">
-            <ArzLogo size="md" theme="light" />
+      <header className="sticky top-0 z-50 border-b border-slate-800 bg-[#0F172A] text-white shadow-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <a href="/" aria-label="LOPO Construction home">
+            <LOPOLogo size="md" theme="dark" />
           </a>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden items-center gap-7 text-sm font-semibold tracking-wide text-ink/80 lg:flex">
-            <a className="transition-colors hover:text-amber" href="/">
+          <nav className="hidden items-center gap-8 text-sm font-bold tracking-wide text-slate-200 lg:flex">
+            <a className="transition-colors hover:text-[#F59E0B]" href="/">
               Home
             </a>
 
@@ -46,13 +55,13 @@ export function SiteHeader() {
             >
               <a
                 href="/services"
-                className="inline-flex items-center gap-1 transition-colors hover:text-amber"
+                className="inline-flex items-center gap-1 transition-colors hover:text-[#F59E0B]"
                 aria-haspopup="true"
                 aria-expanded={servicesOpen}
               >
                 Services
                 <ChevronDown
-                  className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`}
+                  className={`h-4 w-4 transition-transform duration-300 ${servicesOpen ? "rotate-180 text-[#F59E0B]" : ""}`}
                 />
               </a>
               <div
@@ -62,38 +71,38 @@ export function SiteHeader() {
                     : "invisible opacity-0 -translate-y-1"
                 }`}
               >
-                <div className="w-[540px] rounded-2xl border border-ink/10 bg-white p-4 shadow-2xl shadow-ink/10">
+                <div className="w-[540px] rounded-2xl border border-slate-800 bg-[#0F172A] p-5 shadow-2xl">
                   <div className="grid grid-cols-2 gap-1">
-                    <div className="col-span-2 px-3 py-1">
-                      <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-amber">
-                        Our Services
+                    <div className="col-span-2 px-3 py-1 mb-1">
+                      <p className="text-[11px] font-black uppercase tracking-[0.2em] text-[#F59E0B]">
+                        Our Construction Services
                       </p>
                     </div>
                     {NAV_SERVICES.map((s) => (
                       <a
                         key={s.href}
                         href={s.href}
-                        className="group flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-sand-2"
+                        className="group flex items-start gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-slate-800"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber" />
+                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-[#F59E0B]" />
                         <span>
-                          <span className="block text-sm font-bold text-ink transition-colors group-hover:text-amber">
+                          <span className="block text-sm font-bold text-white transition-colors group-hover:text-[#F59E0B]">
                             {s.title}
                           </span>
-                          <span className="mt-0.5 block text-xs leading-snug text-ink/60">
+                          <span className="mt-0.5 block text-xs leading-snug text-slate-400">
                             {s.description}
                           </span>
                         </span>
                       </a>
                     ))}
                   </div>
-                  <div className="mt-2 border-t border-ink/10 px-3 pt-3">
+                  <div className="mt-3 border-t border-slate-800 px-3 pt-3">
                     <a
                       href="/services"
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber hover:text-copper transition-colors"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#F59E0B] hover:text-white transition-colors"
                     >
                       <span>View All Services</span>
-                      <span>→</span>
+                      <ArrowRight className="h-3.5 w-3.5" />
                     </a>
                   </div>
                 </div>
@@ -101,7 +110,7 @@ export function SiteHeader() {
             </div>
 
             {NAV_LINKS.filter((l) => l.label !== "Home" && l.label !== "Services").map((l) => (
-              <a key={l.href} className="transition-colors hover:text-amber" href={l.href}>
+              <a key={l.href} className="transition-colors hover:text-[#F59E0B]" href={l.href}>
                 {l.label}
               </a>
             ))}
@@ -110,24 +119,21 @@ export function SiteHeader() {
           {/* HEADER ACTIONS */}
           <div className="flex items-center gap-3">
             <a
-              className="hidden sm:inline-flex items-center gap-2 rounded-full border border-ink/15 px-4 py-2 text-xs font-bold uppercase tracking-wider text-ink transition-all hover:bg-ink hover:text-sand-2"
-              href={`tel:+44${SITE.phone.slice(1)}`}
+              className="hidden sm:inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/80 px-4 py-2 text-xs font-bold tracking-wider text-white transition-all hover:bg-slate-700"
+              href={`tel:${SITE.phone}`}
             >
-              <Phone className="h-3.5 w-3.5" />
+              <Phone className="h-3.5 w-3.5 text-[#F59E0B]" />
               {SITE.phoneDisplay}
             </a>
             <a
-              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-[#20bd5a] hover:shadow-lg hover:-translate-y-0.5"
-              href={`https://wa.me/${SITE.whatsapp}`}
-              target="_blank"
-              rel="noreferrer"
+              className="hidden sm:inline-flex items-center gap-2 rounded-xl bg-[#F59E0B] px-5 py-2.5 text-xs font-black uppercase tracking-wider text-[#0F172A] shadow-md transition-all hover:bg-[#D97706] hover:text-white hover:shadow-lg hover:-translate-y-0.5"
+              href="/contact"
             >
-              <MessageCircle className="h-3.5 w-3.5" />
-              WhatsApp Us
+              Get a Quote <ArrowRight className="h-3.5 w-3.5" />
             </a>
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 text-ink lg:hidden"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 text-white lg:hidden"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Toggle menu"
             >
@@ -138,16 +144,16 @@ export function SiteHeader() {
 
         {/* MOBILE MENU */}
         {mobileOpen && (
-          <nav className="border-t border-ink/10 bg-sand-2 lg:hidden">
+          <nav className="border-t border-slate-800 bg-[#0F172A] lg:hidden">
             <div className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4">
               <a
                 href="/"
                 onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-bold text-ink hover:bg-sand"
+                className="rounded-lg px-3 py-2.5 text-sm font-bold text-white hover:bg-slate-800"
               >
                 Home
               </a>
-              <p className="px-3 pt-2 text-[11px] font-bold uppercase tracking-[0.2em] text-amber">
+              <p className="px-3 pt-2 text-[11px] font-black uppercase tracking-[0.2em] text-[#F59E0B]">
                 Services
               </p>
               {NAV_SERVICES.map((s) => (
@@ -155,7 +161,7 @@ export function SiteHeader() {
                   key={s.href}
                   href={s.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-semibold text-ink/80 hover:bg-sand hover:text-ink"
+                  className="rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-300 hover:bg-slate-800 hover:text-white"
                 >
                   {s.title}
                 </a>
@@ -163,7 +169,7 @@ export function SiteHeader() {
               <a
                 href="/services"
                 onClick={() => setMobileOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-bold text-amber hover:bg-sand"
+                className="rounded-lg px-3 py-2.5 text-sm font-bold text-[#F59E0B] hover:bg-slate-800"
               >
                 All Services →
               </a>
@@ -172,7 +178,7 @@ export function SiteHeader() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-bold text-ink hover:bg-sand"
+                  className="rounded-lg px-3 py-2.5 text-sm font-bold text-white hover:bg-slate-800"
                 >
                   {l.label}
                 </a>
